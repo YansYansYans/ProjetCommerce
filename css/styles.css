@@ -78,3 +78,76 @@ footer {
 	padding-left: 5%;
 	padding-right: 5%;
 }
+
+
+
+
+
+.article img.titre {
+	width: 250px;
+	margin-left: 5%;
+}
+.article header {
+	margin-bottom: 0%;
+	margin-top: 0%;
+	display: flex;
+	justify-content: space-between;
+
+}
+.fa-shopping-cart {
+	color: #261624;
+}
+.fa-shopping-cart:hover {
+	color: #cc7c51;
+	transition: 400ms;
+	transform: scale(1.1);
+}
+.logopanier {
+	margin-right: 5%;
+	margin-top: 40px;
+}
+.head {
+	display: flex;
+	justify-content: center;
+	height: 50px;
+	margin-bottom: 250px;
+	margin-top: 200px;
+}
+input {
+	width: 500px;
+	border-radius: 15px;
+	border-color: #607D8B;
+}
+button {
+	background-color: black;
+	color: #261624;
+	font-size: 2em;
+	border: none;
+	margin-left: -50px;
+	height: 0px;
+}
+button:hover {
+	color: #cc7c51;
+	transition: 400ms;
+	transform: scale(1.1);
+	cursor: pointer;
+}
+#blockarticle {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 200px;
+}
+#blockarticle section {
+	background-color: red; 
+	width: 300px;
+	height: 300px;
+	margin: 10px;
+	border-radius: 20px;
+}
+#blockarticle section:hover {
+	transition: 400ms;
+	transform: scale(1.1);
+}
