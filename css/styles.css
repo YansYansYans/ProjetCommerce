@@ -82,23 +82,23 @@ footer {
   padding-right: 5%;
 }
 
-.article img.titre, .produit img.titre {
+.article img.titre, .produit img.titre, .panier img.titre {
   width: 250px;
   margin-left: 5%;
 }
 
-.article header, .produit header {
+.article header, .produit header, .panier header {
   margin-bottom: 0%;
   margin-top: 0%;
   display: flex;
   justify-content: space-between;
 }
 
-.fa-shopping-cart {
+.fa-shopping-cart, .fa-long-arrow-alt-left {
   color: #261624;
 }
 
-.fa-shopping-cart:hover {
+.fa-shopping-cart:hover, .fa-long-arrow-alt-left:hover {
   color: #cc7c51;
   transition: 400ms;
   transform: scale(1.1);
@@ -263,17 +263,90 @@ button:hover {
   background-color: white;
 }
 
-.fa-cart-arrow-down {
+.bottomright .fa-cart-arrow-down {
   color: #261624;
   margin-left: 65%;
   margin-top: 60px;
 }
 
-.fa-cart-arrow-down:hover {
+.bottomright .fa-cart-arrow-down:hover {
   color: #cc7c51;
   transition: 400ms;
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.titrepanier, .article1, .article2, .article3 {
+  display: flex;
+}
+
+#blockpanier {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.titrepanier {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.titrepanier h1 {
+  font-size: 5em;
+  color: #261624;
+}
+.titrepanier .fa-cart-arrow-down {
+  margin-top: 40px;
+  color: #261624;
+}
+.titrepanier p {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 90px;
+  color: #261624;
+}
+
+.allarticle {
+  margin-top: 150px;
+  width: 60%;
+  margin-bottom: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.allarticle .article1, .allarticle .article2, .allarticle .article3 {
+  justify-content: space-between;
+  box-shadow: 0px 0px 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.allarticle img {
+  width: 10em;
+}
+.allarticle h3 {
+  font-size: 2em;
+  color: #261624;
+  margin-top: -10px;
+  margin-top: 5px;
+}
+.allarticle .partright {
+  margin-left: 40px;
+  text-align: center;
+}
+.allarticle .partprix {
+  font-size: 2em;
+  margin-right: 10px;
+}
+.allarticle button {
+  width: 40px;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 80px;
+  margin-top: 15px;
+}
+.allarticle .cpa {
+  margin-left: -80px;
+  margin-top: -20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
