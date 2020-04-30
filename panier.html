@@ -115,6 +115,48 @@
 			</div>
 		</div>
 	</div>
+	<div class="formulaire">
+		<form method="post" action="traitement.php">
+			<legend>
+				Enregistrez votre Commande
+			</legend>
+			<p class="prenomnom">
+				<label for="prenom">Prénom</label>
+				<input type="text" name="prenom" id="prenom" required="">
+				<label for="nom">Nom</label>
+				<input type="text" name="nom" id="nom" required="">
+			</p>
+			<p>
+				<label for="email">Adresse Mail</label>
+				<input type="email" name="email" id="email" required="">
+				<label for="telephone">Téléphone</label>
+				<input type="tel" name="telephone" id="telephone" required="">
+			</p>
+			<p>
+				<label for="rue">N et Rue</label>
+				<input type="text" name="rue" id="rue" required="">
+				<label for="ville">Ville</label>
+				<input type="text" name="ville" id="ville" required="">
+			</p>
+			<p class="pays">
+				<label for="pays">Pays</label>
+				<select name="pays" id="pays" required="">
+					<option value="france">France</option>
+					<option value="usa">Etats-Unis</option>
+					<option value="angletterre">Angletterre</option>
+					<option value="suisse">Suisse</option>
+					<option value="espagne">Espagne</option>
+				</select>
+			</p>
+			<p class="condition">
+				<label for="condition">J'accepte avoir lu les Conditions Générales d'utilisation.</label>
+				<input type="checkbox" name="condition" id="condition" required="">
+			</p>
+			<p>
+			<input class="commander" type="submit" name="commander" value="Commander">
+			</p>
+		</form>
+	</div>
 </div>
 
 <footer>
