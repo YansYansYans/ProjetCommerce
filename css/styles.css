@@ -505,9 +505,10 @@ footer {
   .head {
     height: 80px;
   }
-  .head input {
+  .head input.search {
     width: 800px;
     border-radius: 80px;
+    font-size: 2.5em;
   }
   .head button {
     font-size: 3em;
@@ -665,6 +666,7 @@ footer {
     border-radius: 15px;
     margin-bottom: 50px;
     border-color: black;
+    font-size: 1em;
   }
   .formulaire p {
     font-size: 2.5em;

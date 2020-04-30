@@ -494,9 +494,10 @@ footer {
 	}
 	.head {
 		height: 80px;
-		& input {
+		& input.search {
 			width: 800px;
 			border-radius: 80px;
+			font-size: 2.5em;
 		}
 		& button {
 			font-size: 3em;
@@ -637,6 +638,7 @@ footer {
 			border-radius: 15px;
 			margin-bottom: 50px;
 			border-color: black;
+			font-size: 1em;
 		}
 		& p {
 			font-size: 2.5em;
