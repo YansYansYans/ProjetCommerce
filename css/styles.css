@@ -94,11 +94,11 @@ footer {
   justify-content: space-between;
 }
 
-.fa-shopping-cart, .fa-long-arrow-alt-left {
+.fa-shopping-cart, .fa-long-arrow-alt-left, .fa-trash-alt {
   color: #261624;
 }
 
-.fa-shopping-cart:hover, .fa-long-arrow-alt-left:hover {
+.fa-shopping-cart:hover, .fa-long-arrow-alt-left:hover, .fa-trash-alt:hover {
   color: #cc7c51;
   transition: 400ms;
   transform: scale(1.1);
@@ -336,6 +336,12 @@ button:hover {
 .allarticle .partprix {
   font-size: 2em;
   margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.allarticle .partprix .fa-trash-alt {
+  margin-top: 75px;
+  margin-left: 20px;
 }
 .allarticle button {
   width: 40px;
