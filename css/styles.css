@@ -82,12 +82,12 @@ footer {
   padding-right: 5%;
 }
 
-.article img.titre, .produit img.titre, .panier img.titre {
+.article img.titre, .produit img.titre, .panier img.titre, .confirmation img.titre {
   width: 250px;
   margin-left: 5%;
 }
 
-.article header, .produit header, .panier header {
+.article header, .produit header, .panier header, .confirmation header {
   margin-bottom: 0%;
   margin-top: 0%;
   display: flex;
@@ -399,6 +399,44 @@ button:hover {
 }
 .formulaire .commander {
   margin-bottom: 50px;
+}
+
+#blockconfirmation {
+  margin-bottom: 200px;
+}
+
+.titreconfirmation {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  display: flex;
+  margin-left: 5%;
+  margin-top: 50px;
+}
+.titreconfirmation h1 {
+  font-size: 5em;
+  color: #261624;
+  margin-left: 2.5%;
+}
+.titreconfirmation .fa-paper-plane {
+  margin-top: 40px;
+  color: #261624;
+}
+.titreconfirmation p {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 90px;
+  color: #261624;
+}
+
+.allconfirmation {
+  margin-left: 5%;
+  font-size: 1.7em;
+}
+.allconfirmation div {
+  margin-bottom: 5%;
+}
+.allconfirmation div span {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=styles.css.map */
