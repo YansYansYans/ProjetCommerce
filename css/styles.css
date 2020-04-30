@@ -34,9 +34,15 @@ header .titre {
   display: block;
   margin-bottom: 10%;
 }
+#blockmain .slogan {
+  position: relative;
+  top: 40%;
+  color: white;
+  font-size: 4em;
+}
 #blockmain .trouver {
   position: relative;
-  top: 70%;
+  top: 60%;
 }
 #blockmain .trouver a {
   color: #261624;
@@ -113,17 +119,15 @@ footer {
   display: flex;
   justify-content: center;
   height: 50px;
-  margin-bottom: 250px;
-  margin-top: 200px;
+  margin-bottom: 17.5%;
+  margin-top: 12.5%;
 }
-
-input {
+.head input {
   width: 500px;
   border-radius: 15px;
   border-color: #607D8B;
 }
-
-button {
+.head button {
   background-color: rgba(0, 0, 255, 0.5);
   color: #261624;
   font-size: 2em;
@@ -131,8 +135,7 @@ button {
   margin-left: -50px;
   height: 0px;
 }
-
-button:hover {
+.head button:hover {
   color: #cc7c51;
   transition: 400ms;
   transform: scale(1.1);
@@ -198,19 +201,20 @@ button:hover {
   display: flex;
   margin-bottom: 100px;
   flex-wrap: wrap;
-}
-
-.blocktop img {
-  width: 40%;
-  box-shadow: 0px 0px 10px;
+  justify-content: space-between;
 }
 
 .topright {
   text-align: center;
-  width: 60%;
   color: #261624;
-  font-size: 2em;
   font-weight: bold;
+  margin-right: 20%;
+}
+.topright h1 {
+  font-size: 3.5em;
+}
+.topright p {
+  font-size: 2em;
 }
 
 .bottomleft {
@@ -225,7 +229,7 @@ button:hover {
   margin-bottom: 5px;
   flex-wrap: wrap;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px;
+  box-shadow: 0px 0px 5px;
 }
 
 .couleur button {
@@ -265,7 +269,6 @@ button:hover {
 
 .bottomright .fa-cart-arrow-down {
   color: #261624;
-  margin-left: 65%;
   margin-top: 60px;
 }
 
