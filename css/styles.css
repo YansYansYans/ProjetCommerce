@@ -441,5 +441,291 @@ footer {
 .allconfirmation div span {
   font-weight: bold;
 }
+.allconfirmation div span.rouge {
+  font-weight: normal;
+  color: red;
+}
+
+@media all and (max-device-width: 576px) {
+  header .titre {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  #blockmain {
+    width: 100%;
+    height: 1000px;
+    margin-bottom: 10%;
+  }
+  #blockmain .slogan {
+    top: 20%;
+    font-size: 6em;
+  }
+  #blockmain .trouver {
+    top: 40%;
+  }
+  #blockmain .trouver a {
+    font-size: 5em;
+  }
+
+  .information {
+    width: 70%;
+    font-size: 3em;
+    text-align: justify;
+  }
+
+  .information1, .information2, .information3 {
+    margin-bottom: 15%;
+  }
+
+  .information2 aside {
+    margin-left: 0%;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 3em;
+  }
+
+  .article img.titre, .produit img.titre, .panier img.titre, .confirmation img.titre {
+    width: 50%;
+  }
+
+  .logopanier {
+    font-size: 2em;
+  }
+  .logopanier .fa-shopping-cart {
+    margin-right: 50px;
+    margin-top: 25px;
+  }
+
+  .head {
+    height: 80px;
+  }
+  .head input {
+    width: 800px;
+    border-radius: 80px;
+  }
+  .head button {
+    font-size: 3em;
+    margin-left: -80px;
+  }
+
+  #blockarticle {
+    width: 90%;
+  }
+
+  #blockarticle section.block {
+    width: 740px;
+    height: 920px;
+    box-shadow: 0px 0px 10px black;
+  }
+
+  #blockarticle section.block:hover:hover h2 {
+    display: block;
+  }
+
+  #blockarticle section img {
+    width: 45em;
+  }
+
+  #blockarticle h2 {
+    font-size: 4em;
+    font-weight: bold;
+  }
+
+  #blockarticle .invisible {
+    display: block;
+    margin-top: -50px;
+    font-size: 3.5em;
+  }
+
+  #blockproduit {
+    width: 80%;
+  }
+
+  .topleft img {
+    width: 48.2em;
+  }
+
+  .topright {
+    width: 100%;
+    margin-right: 0%;
+  }
+  .topright h1 {
+    font-size: 5em;
+  }
+  .topright p {
+    font-size: 3.5em;
+  }
+
+  .blockbottom {
+    flex-direction: column;
+  }
+
+  .bottomleft {
+    width: 100%;
+  }
+  .bottomleft h2 {
+    font-size: 3em;
+  }
+
+  .couleur, .model, .accessoire {
+    display: flex;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px;
+  }
+
+  .couleur button {
+    width: 90px;
+    height: 80px;
+    margin-top: 35px;
+  }
+
+  .model button {
+    width: 90px;
+    height: 80px;
+    margin-top: 35px;
+    font-size: 2em;
+  }
+
+  .accessoire button {
+    width: 80px;
+    height: 80px;
+    margin-left: 70px;
+    margin-top: 35px;
+    font-size: 2em;
+  }
+
+  .bottomright .fa-cart-arrow-down {
+    color: #261624;
+    margin-top: 60px;
+    margin-left: 300px;
+  }
+
+  .bottomright .fa-cart-arrow-down:hover {
+    color: #cc7c51;
+    transition: 400ms;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  #blockpanier {
+    width: 100%;
+  }
+
+  .titrepanier p {
+    font-size: 3em;
+  }
+
+  .allarticle {
+    width: 80%;
+  }
+  .allarticle .article1, .allarticle .article2, .allarticle .article3 {
+    margin-bottom: 50px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .allarticle img {
+    width: 20em;
+  }
+  .allarticle h3 {
+    font-size: 3em;
+    margin-top: 5px;
+  }
+  .allarticle h4 {
+    font-size: 2em;
+  }
+  .allarticle .partprix {
+    font-size: 3em;
+  }
+  .allarticle .partprix .fa-trash-alt {
+    margin-top: 185px;
+  }
+  .allarticle button {
+    width: 50px;
+    height: 40px;
+  }
+
+  .formulaire {
+    width: 80%;
+  }
+  .formulaire legend {
+    font-size: 4em;
+    margin-bottom: 100px;
+  }
+  .formulaire input {
+    width: 600px;
+    height: 50px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    border-color: black;
+  }
+  .formulaire p {
+    font-size: 2.5em;
+  }
+  .formulaire .pays {
+    margin-left: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .formulaire .pays select {
+    margin-left: 80px;
+    font-size: 1.2em;
+    border-color: black;
+  }
+  .formulaire .condition {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  .formulaire .commander {
+    margin-bottom: 50px;
+    font-size: 1.2em;
+    height: 100px;
+    width: 300px;
+    background-color: #261624;
+    color: white;
+    font-weight: bold;
+  }
+  .formulaire .commander:active {
+    background-color: white;
+    color: #261624;
+  }
+
+  .confirmation footer {
+    display: none;
+  }
+
+  .titreconfirmation {
+    margin-left: 2.5%;
+    margin-top: 100px;
+  }
+
+  .allconfirmation {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 2em;
+    text-align: justify;
+  }
+  .allconfirmation div {
+    margin-bottom: 0%;
+    margin-top: 80px;
+  }
+  .allconfirmation div span {
+    font-weight: bold;
+  }
+  .allconfirmation div span.rouge {
+    font-weight: normal;
+    color: red;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
