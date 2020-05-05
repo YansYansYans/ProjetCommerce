@@ -6,84 +6,120 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<meta name="description" content="Trouver la caméra qu'il vous faut sur Oriview">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+	<script src="index.js"></script>
+
 </head>
 
+
 <body class="article">
+
 
 <header>
 	<a href="index.html">
 		<img class="titre" src="img/oriview.png">
 	</a>
-	<a class="logopanier" href="panier.html">
-		<i class="fas fa-shopping-cart fa-2x"></i>
-	</a>
+	 <div class="cart">
+	 	<a class="logopanier" href="panier.html">
+			<i class="fas fa-shopping-cart fa-2x"></i>
+		</a>
+		<div>
+	        <h3 class="tit">
+	        	Mon Panier
+	        </h3>
+	        <!-- Liste des Articles dans le panier -->
+	        <ul id="items"></ul> 
+	        <h3 id="total" style="text-align: right;">
+	        	Total : 0 €
+	        </h3>
+        </div>
+    </div>
 </header>
 
-<div class="head">
-	<input class="search" type="search" id="site-search" name="q"
-       aria-label="Search through site content">
-	<button>
-		<i class="fas fa-search"></i>
-	</button>
+
+<div class="container">
+	<a class="aaa" href="produit1.html">
+		<div class="article">
+        	<img src="images/vcam_1.jpg">
+            <h3 class="tit" id="name1">
+            	Camera FED 3
+            </h3>
+            <div class="prix">
+                <h4 id="price1">
+                	48
+           		</h4>
+                <h4>
+                	€
+                </h4>
+            </div>
+        </div>
+    </a>
+	<a class="aaa" href="produit2.html">
+        <div class="article">
+        	<img src="images/vcam_2.jpg">
+            <h3 class="tit" id="name2">
+            	Camera Anex 1800
+            </h3>
+            <div class="prix">
+                <h4 id="price2">
+                	112
+                </h4>
+                <h4>
+                	€
+                </h4>
+        	</div>
+        </div>
+    </a>
+	<a class="aaa" href="produit3.html">
+        <div class="article">
+        	<img src="images/vcam_3.jpg">
+            <h3 class="tit" id="name3">
+            	Camera Stramer 90'
+            </h3>
+             <div class="prix">
+                <h4 id="price3">
+                	230
+                </h4>
+                <h4>
+                	€
+                </h4>
+        	</div>
+        </div>
+    </a>
+	<a class="aaa" href="produit4.html">
+        <div class="article">
+        	<img src="images/vcam_4.jpg">
+            <h3 class="tit" id="name4">
+            	Camera Mamiya M
+            </h3>
+             <div class="prix">
+                <h4 id="price4">
+                	99
+                </h4>
+                <h4>
+                	€
+                </h4>
+        	</div>
+        </div>
+    </a>
+    <a class="aaa" href="produit5.html">
+        <div class="article">
+        	<img src="images/vcam_5.jpg">
+            <h3 class="tit" id="name5">
+            	Canon 310 M
+            </h3>
+             <div class="prix">
+                <h4 id="price5">
+                	230
+                </h4>
+                <h4>
+                	€
+                </h4>
+        	</div>
+        </div>
+    </a>
 </div>
 
-<div id="blockarticle">
-	<a href="produit.html">
-		<section class="block">
-			<img src="img/c1.jpg">
-			<h2>
-				Camera FED 3
-			</h2>
-			<section class="invisible">
-				48€
-			</section>
-		</section>
-	</a>
-	<a href="produit.html">
-		<section class="block">
-			<img src="img/c2.jpg">
-			<h2>
-				Appareil Photo 1800
-			</h2>
-			<section class="invisible">
-				112€
-			</section>
-		</section>
-	</a>
-	<a href="produit.html">
-		<section class="block">
-			<img src="img/c3.jpg">
-			<h2>
-				Appareil Photo Stramer
-			</h2>
-			<section class="invisible">
-				23€
-			</section>
-		</section>
-	</a>
-	<a href="produit.html">
-		<section class="block">
-			<img src="img/c4.jpg">
-			<h2>
-				Camera Mamiya M
-			</h2>
-			<section class="invisible">
-				19€
-			</section>
-		</section>
-	</a>
-	<a href="produit.html">
-		<section class="block">
-			<img src="img/c5.jpg">
-			<h2>
-				Canon 310M
-			</h2>
-			<section class="invisible">
-				63€
-			</section>
-		</section>
-	</a>
-</div>
 
 <footer>
 	<p>

@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<meta name="description" content="Trouver la caméra qu'il vous faut sur Oriview">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	
 </head>
 
 <body class="panier">
@@ -14,73 +15,24 @@
 	<a href="index.html">
 		<img class="titre" src="img/oriview.png">
 	</a>
-	<a class="logopanier" href="produit.html">
-		<i class="fas fa-long-arrow-alt-left fa-3x"></i>
-	</a>
 </header>
 
-<div id="blockpanier">
-	<div class="titrepanier">
-		<i class="fas fa-cart-arrow-down fa-7x"></i>
+<div class="blockpanier">
+	<div class="panierfinal">
 		<h1>
-			Votre Panier
+			Mon Panier
 		</h1>
-		<p>
-			Total : 223€
-		</p>
-	</div>
-	<div class="allarticle">
-		<div class="article1">
-			<div class="partleft">
-				<img src="img/c1.jpg">
-			</div>
-			<div class="partright">
-				<div class="righttop">
-					<h3>
-						Camera FED 3
-					</h3>
-				</div>
-			</div>
-			<div class="partprix">
-				48€
-				<i class="fas fa-trash-alt"></i>
-			</div>
-		</div>
-		<div class="article2">
-			<div class="partleft">
-				<img src="img/c2.jpg">
-			</div>
-			<div class="partright">
-				<div class="righttop">
-					<h3>
-						Appareil Photo 1800
-					</h3>
-				</div>
-			</div>
-			<div class="partprix">
-				112€
-				<i class="fas fa-trash-alt"></i>
-			</div>
-		</div>
-		<div class="article3">
-			<div class="partleft">
-				<img src="img/c5.jpg">
-			</div>
-			<div class="partright">
-				<div class="righttop">
-					<h3>
-						Canon 310M
-					</h3>
-				</div>
-			</div>
-			<div class="partprix">
-				63€
-				<i class="fas fa-trash-alt"></i>
-			</div>
-		</div>
-	</div>
+        <h3 class="tit">
+        	Mon Panier
+        </h3>
+        <!-- Liste des Articles dans le panier -->
+        <ul id="items"></ul> 
+        <h3 id="total" style="text-align: right;">
+        	Total : 0 €
+        </h3>
+    </div>
 	<div class="formulaire">
-		<form method="post" action="traitement.php">
+		<form method="post" action="confirmation.html">
 			<legend>
 				Enregistrez votre Commande
 			</legend>
@@ -132,7 +84,7 @@
 	</p>
 </footer>
 
-
+<script src="app.js"></script>
 
 </body>
 </html>

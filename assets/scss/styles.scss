@@ -311,6 +311,15 @@ footer {
 		border-radius: 5px;
 		margin-bottom: 10px;
 		flex-wrap: wrap;
+		visibility: hidden;
+	}
+	& .article1add, & .article2add, & .article3add {
+		justify-content: space-between;
+		box-shadow: 0px 0px 5px;
+		border-radius: 5px;
+		margin-bottom: 10px;
+		flex-wrap: wrap;
+		visibility: visible;
 	}
 	& img {
 		width: 10em;
@@ -686,3 +695,4 @@ footer {
 		}
 	}
 }
+
