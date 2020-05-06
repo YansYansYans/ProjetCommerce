@@ -696,3 +696,33 @@ footer {
 }
 
 
+.fed {
+  display: none;
+}
+.fedvisible {
+  display: block;
+}
+.anex {
+  display: none;
+}
+.anexvisible {
+  display: block;
+}
+.stramer {
+  display: none;
+}
+.stramervisible {
+  display: block;
+}
+.mamiya {
+  display: none;
+}
+.mamiyavisible {
+  display: block;
+}
+.canon {
+  display: none;
+}
+.canonvisible {
+  display: block;
+}

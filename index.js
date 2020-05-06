@@ -75,11 +75,30 @@
     document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " €"; 
     }
 
-
-
-
-
-
-
+    var art1 = document.getElementById('art1');
+    art1.onclick = function(){
+        var carre = document.querySelector('.fed');
+        carre.classList.add('fedvisible')
+    }
+    var art1 = document.getElementById('art2');
+    art1.onclick = function(){
+        var carre = document.querySelector('.anex');
+        carre.classList.add('anexvisible')
+    }
+    var art1 = document.getElementById('art3');
+    art1.onclick = function(){
+        var carre = document.querySelector('.stramer');
+        carre.classList.add('stramervisible')
+    }
+    var art1 = document.getElementById('art4');
+    art1.onclick = function(){
+        var carre = document.querySelector('.mamiya');
+        carre.classList.add('mamiyavisible')
+    }
+    var art1 = document.getElementById('art5');
+    art1.onclick = function(){
+        var carre = document.querySelector('.canon');
+        carre.classList.add('canonvisible')
+    }
 
 
