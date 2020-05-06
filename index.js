@@ -57,7 +57,7 @@
     // Ajoute BTN pour supprimer l'article 
     document.getElementById(item).innerHTML += '<button onclick="deleItem('+"'"+item+"'"+')">x</button>';
     
-}
+    }
 
  // Supprime le "message erreur" lorsque une lentille est choisi
     function deleteE(eId) {
@@ -73,4 +73,13 @@
     total -= itemCost[n];
     // MAJ Total Panier après tout changement ou modification
     document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " €"; 
-}
+    }
+
+
+
+
+
+
+
+
+

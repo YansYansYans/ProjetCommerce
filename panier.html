@@ -7,6 +7,7 @@
 	<meta name="description" content="Trouver la caméra qu'il vous faut sur Oriview">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	
+	<script src="index.js"></script>
 </head>
 
 <body class="panier">
@@ -32,10 +33,11 @@
         </h3>
     </div>
 	<div class="formulaire">
-		<form method="post" action="confirmation.html">
+		<form method="post">
 			<legend>
 				Enregistrez votre Commande
 			</legend>
+
 			<p class="prenomnom">
 				<label for="prenom">Prénom</label>
 				<input type="text" name="prenom" id="prenom" required="">
@@ -75,6 +77,64 @@
 	</div>
 </div>
 
+<script>
+	// Affichage de la demande de confirmation d'inscription
+		document.getElementById("condition").addEventListener("change", function (e) {
+    	console.log("Condition Lu : " + e.target.checked);
+		});
+
+	// Affichage du code de nationalité choisi
+		document.getElementById("pays").addEventListener("change", function (e) {
+    	console.log("Pays d'envoi : " + e.target.value);
+		});
+
+		var form = document.querySelector("form");
+		console.log("Nombre de champs de saisie : " + form.elements.length); // Affiche 10
+		console.log(form.elements[0].name); // Affiche "pseudo"
+		console.log(form.elements[0].name); // Affiche "pseudo"
+		console.log(form.elements[0].name); // Affiche "pseudo"
+		console.log(form.elements[0].name); // Affiche "pseudo"
+		console.log(form.elements[0].name); // Affiche "pseudo"
+		console.log(form.elements[0].name); // Affiche "pseudo"
+
+
+	// Affiche de toutes les données saisies ou choisies
+	form.addEventListener("submit", function (e) {
+	    var prenom = form.elements.prenom.value;
+	    var nom = form.elements.nom.value;
+	    var email = form.elements.email.value;
+	    var telephone = form.elements.telephone.value;
+	    var rue = form.elements.rue.value;
+	    var ville = form.elements.ville.value;
+	    console.log("PRENOM : " + prenom + " NOM : " +
+	        nom + " EMAIL : " + email + " TELEPHONE : " + telephone + " ADRESSE : " + rue + " A " + ville);
+	    if (form.elements.condition.checked) {
+	        console.log("Condition Lu et Approuvé");
+	    }
+	    switch (form.elements.pays.value) {
+	    case "france":
+	        console.log("Votre Colis sera livré en France");
+	        break;
+	    case "usa":
+	        console.log("Votre Colis sera livré au Etats-Unis");
+	        break;
+	    case "angletterre":
+	        console.log("Votre Colis sera livré en Angletterre");
+	        break;
+	    case "suisse":
+	        console.log("Votre Colis sera livré en Suisse");
+	        break;
+	    case "espagne":
+	        console.log("Votre Colis sera livré en Espagne");
+	        break;
+	    default:
+	        console.log("Erreur : code de nationalité non reconnu");
+	    }
+	    e.preventDefault(); // Annulation de l'envoi des données
+	});
+		
+</script>
+
 <footer>
 	<p>
 		Tout droits réservés-2019-2020 Orinoco
@@ -84,7 +144,6 @@
 	</p>
 </footer>
 
-<script src="app.js"></script>
 
 </body>
 </html>
