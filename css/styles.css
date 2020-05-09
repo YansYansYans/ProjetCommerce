@@ -61,7 +61,7 @@ header .titre {
   background-color: #261624;
   transition: 700ms;
 }
-
+invisible
 .information {
   width: 60%;
   margin-left: auto;
@@ -168,7 +168,7 @@ footer {
   margin-bottom: 200px;
   justify-content: center;
 }
-.container a.aaa {
+.container .aaa {
   
 }
 .container .article {
@@ -193,13 +193,13 @@ footer {
 .container .aaa h4 {
   font-size: 2em;
 }
-.prix {
+.invisible {
   display: none;
   margin-top: -5px;
   font-weight: bold;
   color: #261624;
 }
-.container .article:hover:hover .prix {
+.container .article:hover:hover .invisible {
   display: flex;
   margin-left: 125px;
 }
@@ -551,7 +551,7 @@ footer {
   .container .article img {
     width: 46em;
   }
-  .container .prix {
+  .container .invisble {
     display: flex;
     margin-top: -100px;
     font-size: 3em;

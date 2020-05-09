@@ -1,155 +1,139 @@
- // Total de tout les articles dans le panier
-    var total = 0;
-    // Index
-    var i = 1;
-    // Message Erreur "Ajout sans lentille" 
-    var message = "Veuillez selectionner une Lentille";
-    // Liste des articles dans le panier
-    var itemCost = [];
-
-
-// Ajouter un article
-    function add(n){
-        // n = rang de la camera
-        lentilleId = "lentille" + n;
-        /* Chaque camera a un Id (racine + rang)*/
-        messageId = "message" + n;
-        // Lentille selectionné
-        lentille = document.getElementById(lentilleId).value;
-        // Si non-selection-lentille alors message-erreur
-        if (lentille==="lentille"){
-            document.getElementById(messageId).innerHTML = message;
-            return 0;
+// Propriété du Panier
+    var shoppingCart = (function () {
+    // Méthode
+        var cart = [];
+    // Création de la fonction article serveur
+        function Item(name, price, count, description, imageUrl) {
+            this.name = name
+            this.price = price
+            this.count = count
+            this.description = description
+            this.imageUrl = imageUrl
         }
-
-// Tout les Id de la Camera selectionné
-    name = "name" + n;
-    priceId = "price" + n;
-    quantityId = "quantity" + n;
-
-// Detaille de la camera
-    // Marque
-    name = document.getElementById(name).innerHTML;
-    // Prix
-    price = document.getElementById(priceId).innerHTML;
-    // Quantité
-    quantity = document.getElementById(quantityId).value;
-
-// Crée "li" pour ajouter à "ul" 
-    var node = document.createElement("LI");
-    // Id de "li" 
-    item = "item"+i;
-    node.setAttribute("id", item)
-    // Prix de la camera selectionné
-    itemCost[i-1] = Number(price) * Number(quantity);
-    // MAJ = index i 
-    i += 1;
-    // Texte de "li"
-    var textnode = document.createTextNode(name+" "+quantity+" x "+price+" €, Lentille: "+ lentille);
-    // Ajoute "texte" à "li"
-    node.appendChild(textnode);
-    // Ajoute "li" à liste "ul"
-    document.getElementById("items").appendChild(node);
-
-    total += Number(price) * Number(quantity);
-    // MAJ Total
-    document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " €";
-    
-    // Ajoute BTN pour supprimer l'article 
-    document.getElementById(item).innerHTML += '<button onclick="deleItem('+"'"+item+"'"+')">x</button>';
-    
-    }
-
- // Supprime le "message erreur" lorsque une lentille est choisi
-    function deleteE(eId) {
-        document.getElementById(eId).innerHTML = ' ';
-    }
-
-// Retire un produit du panier
-    function deleItem(eId){
-        document.getElementById(eId).remove();
-
-    n = Number(eId.slice(-1)) - 1;
-    // Supprime le cout du produit supprimé du panier
-    total -= itemCost[n];
-    // MAJ Total Panier après tout changement ou modification
-    document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " €"; 
-    }
-
-    class Camera {
-            constructor(id, name, price, description, imageUrl) {
-                this.id = id;
-                this.name = name;
-                this.price = price;
-                this.description = description;
-                this.imageUrl = imageUrl;
-            }
-            showTotal() {
-                console.log('Total : ' + this.price + ' € ')
+    // Sauvegarde Panier avec localStorage
+        function saveCart() {
+            localStorage.setItem("shoppingCart", JSON.stringify(cart));
+        }
+        function loadCart() {
+            cart = JSON.parse(localStorage.getItem("shoppingCart"));
+            if (cart === null) {
+                cart = []
             }
         }
 
-        var id = document.querySelector('id');
-
-        // liste des articles
-        let Camera1 = new Camera(
-            "name1",
-            "Camera FED 3",
-            48,
-            "La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.",
-            "images/vcam_1.jpg");
-        let Camera2 = new Camera(
-            "name2",
-            "Camera Anex 1800",
-            112,
-            "La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.",
-            "images/vcam_2.jpg");
-        let Camera3 = new Camera(
-            "name3",
-            "Camera Stramer 90'",
-            230,
-            "La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.",
-            "images/vcam_3.jpg");
-        let Camera4 = new Camera(
-            "name4",
-            "Camera Mamiya M",
-            99,
-            "La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.",
-            "images/vcam_4.jpg");
-        let Camera5 = new Camera(
-            "name5",
-            "Canon 310 M",
-            230,
-            "La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.",
-            "images/vcam_5.jpg");
-
-
-        console.log(Camera1);
-        console.log(Camera2);
-        console.log(Camera3);
-        console.log(Camera4);
-        console.log(Camera5);
+        loadCart();
 
 
 
-request.open("GET", "http://localhost:3000/api/cameras");
+// Partie destinée au publique
+// Chargement de l'objet demandé
+    var obj = {};
+// Ajoute ses 3 fonctions de l'article au panier
+    obj.addItemToCart = function (name, price, count) {
+        for (var i in cart) {
+            if (cart[i].name === name) {
+                cart[i].count += count;
+                saveCart();
+                return;
+            }
+        }
 
-// Transforme l'objet JavaScript en chaîne de caractères JSON
-    var texteCamera1 = JSON.stringify(Camera1);
-    var texteCamera2 = JSON.stringify(Camera2);
-    var texteCamera3 = JSON.stringify(Camera3);
-    var texteCamera4 = JSON.stringify(Camera4);
-    var texteCamera5 = JSON.stringify(Camera5);
-    console.log(texteCamera1);
-    console.log(texteCamera2);
-    console.log(texteCamera3);
-    console.log(texteCamera4);
-    console.log(texteCamera5);
-// Transforme la chaîne de caractères JSON en objet JavaScript
-    console.log(JSON.parse(texteCamera1));
-    console.log(JSON.parse(texteCamera2));
-    console.log(JSON.parse(texteCamera3));
-    console.log(JSON.parse(texteCamera4));
-    console.log(JSON.parse(texteCamera5));
+        console.log("addItemToCart:", name, price, count);
+
+        var item = new Item(name, price, count);
+        cart.push(item);
+        saveCart();
+    };
+// Nombre d'article à ajouter
+    obj.setCountForItem = function (name, count) {
+        for (var i in cart) {
+            if (cart[i].name === name) {
+                cart[i].count = count;
+                break;
+            }
+        }
+        saveCart();
+    };
+
+// Retirer l'objet du panier
+    obj.removeItemFromCart = function (name) {  
+        for (var i in cart) {
+            if (cart[i].name === name) { 
+                cart[i].count--; 
+                if (cart[i].count === 0) {
+                    cart.splice(i, 1);
+                }
+                break;
+            }
+        }
+        saveCart();
+    };
+
+// Supprime tout les noms d'articles
+    obj.removeItemFromCartAll = function (name) { 
+        for (var i in cart) {
+            if (cart[i].name === name) {
+                cart.splice(i, 1);
+                break;
+            }
+        }
+        saveCart();
+    };
 
 
+    obj.clearCart = function () {
+        cart = [];
+        saveCart();
+    }
+
+// Total d'article
+    obj.countCart = function () { 
+        var totalCount = 0;
+        for (var i in cart) {
+            totalCount += cart[i].count;
+        }
+
+        return totalCount;
+    };
+
+// Total Prix
+    obj.totalCart = function () { 
+        var totalCost = 0;
+        for (var i in cart) {
+            totalCost += cart[i].price * cart[i].count;
+        }
+        return totalCost.toFixed(2);
+    };
+
+// Tableau du panier
+    obj.listCart = function () {
+        var cartCopy = [];
+        console.log("Listing cart");
+        console.log(cart);
+        for (var i in cart) {
+            console.log(i);
+            var item = cart[i];
+            var itemCopy = {};
+            for (var p in item) {
+                itemCopy[p] = item[p];
+            }
+            itemCopy.total = (item.price * item.count).toFixed(2);
+            cartCopy.push(itemCopy);
+        }
+        return cartCopy;
+    };
+
+
+    return obj;
+})();
+
+
+
+
+
+
+
+
+
+
+       
