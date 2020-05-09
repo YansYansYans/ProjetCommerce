@@ -6,8 +6,16 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<meta name="description" content="Trouver la caméra qu'il vous faut sur Oriview">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-
+    <link href="img/favicon.ico" rel="shortcut icon" />
     <script src="index.js"></script>
+    <script src="app.js"></script>
+    <script src="JWDP5-master/app.js"></script>
+    <script src="JWDP5-master/serveur.js"></script>
+    <script src="JWDP5-master/package.json.js"></script>
+    <script src="JWDP5-master/models/camera.js"></script>
+    <script src="JWDP5-master/controllers/camera.js"></script>
+    <script src="JWDP5-master/routes/camera.js"></script>
+    
 </head>
 
 <body class="produit">
@@ -25,7 +33,7 @@
                 Mon Panier
             </h3>
             <!-- Liste des Articles dans le panier -->
-            <ul id="items"></ul> 
+            <ul id="items" ></ul> 
             <h3 id="total" style="text-align: right;">
                 Total : 0 €
             </h3>
@@ -41,18 +49,18 @@
        </div>
         <div class="topright">
             <h1 class="tit" id="name1">
-            	Camera FED 3
+            	
             </h1>
             <div class="prix1">
                 <p id="price1">
-                	48
+                	
            		</p>
                 <p>
                 	€
                 </p>
             </div>
             <p id="description">
-                La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.
+                
             </p>
         </div>
     </div>
@@ -89,225 +97,55 @@
     </div>
 </div>
 
-<div id="blockproduit" class="anex">
-    <div class="blocktop">
-        <div class="topleft">
-           <img src="images/vcam_2.jpg">
-       </div>
-        <div class="topright">
-            <h1 class="tit" id="name2">
-                Camera Anex 1800
-            </h1>
-            <div class="prix2">
-                <p id="price2">
-                    112
-                </p>
-                <p>
-                    €
-                </p>
-            </div>
-            <p id="description">
-                La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.
-            </p>
-        </div>
-    </div>
-    <div class="blockbottom">
-        <div class="bottomleft">
-            <div class="inputs">
-                <input type="number" id="quantity2" name="quantity2" min="1" max="99" value="1">
-                <select id="lentille2" name="lentille2" onclick="deleteE('message2')">
-                    <option value="lentille" disabled selected>
-                        Lentille
-                    </option>
-                    <option class="rouge" value="Rouge">    
-                        Rouge
-                    </option>
-                    <option class="bleue" value="Bleue">
-                        Bleue
-                    </option>
-                    <option class="vert" value="Verte">
-                        Verte
-                    </option>
-                    <option  class="blanc" value="Blanche">
-                        Blanche
-                    </option>
-                    <option class="noir" value="Noire">
-                        Noire
-                    </option>
-                </select>
-            </div>
-        </div>
-        <div class="bottomright">
-            <i id="bouton" class="fas fa-cart-arrow-down fa-7x"  class="addTo" onclick="add(2)"></i>
-        </div>
-        <p id="message2"></p>
-    </div>
-</div>
+<script>
+    var art1 = document.getElementById('art1');
+    art1.onclick = function(){
+        var name1 = document.getElementById("name1");
+        name1.innerHTML += "Camera FED 3";
+        var price1 = document.getElementById("price1");
+        price1.innerHTML += "48";
+        var description = document.getElementById("description");
+        description.innerHTML += "La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.";
+    }
+    var art2 = document.getElementById('art2');
+    art2.onclick = function(){
+        var name1 = document.getElementById("name1");
+        name1.innerHTML += "Camera Anex 1800";
+        var price1 = document.getElementById("price1");
+        price1.innerHTML += "112";
+        var description = document.getElementById("description");
+        description.innerHTML += "L'Anex 1800 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.";
+    }
+    var art3 = document.getElementById('art3');
+    art3.onclick = function(){
+        var name1 = document.getElementById("name1");
+        name1.innerHTML += "Camera Stramer 90'";
+        var price1 = document.getElementById("price1");
+        price1.innerHTML += "230";
+        var description = document.getElementById("description");
+        description.innerHTML += "La Stramer 90' a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.";
+    }
+    var art4 = document.getElementById('art4');
+    art4.onclick = function(){
+        var name1 = document.getElementById("name1");
+        name1.innerHTML += "Camera Mamiya M";
+        var price1 = document.getElementById("price1");
+        price1.innerHTML += "99";
+        var description = document.getElementById("description");
+        description.innerHTML += "La Mamiya M a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.";
+    }
+    var art5 = document.getElementById('art5');
+    art5.onclick = function(){
+        var name1 = document.getElementById("name1");
+        name1.innerHTML += "Canon 310 M";
+        var price1 = document.getElementById("price1");
+        price1.innerHTML += "230";
+        var description = document.getElementById("description");
+        description.innerHTML += "La Canon 310 M a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.";
+    }
 
-<div id="blockproduit" class="stramer">
-    <div class="blocktop">
-        <div class="topleft">
-           <img src="images/vcam_3.jpg">
-       </div>
-        <div class="topright">
-            <h1 class="tit" id="name3">
-                Camera Stramer 90'
-            </h1>
-            <div class="prix3">
-                <p id="price3">
-                    230
-                </p>
-                <p>
-                    €
-                </p>
-            </div>
-            <p id="description">
-                La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.
-            </p>
-        </div>
-    </div>
-    <div class="blockbottom">
-        <div class="bottomleft">
-            <div class="inputs">
-                <input type="number" id="quantity3" name="quantity3" min="1" max="99" value="1">
-                <select id="lentille3" name="lentille3" onclick="deleteE('message3')">
-                    <option value="lentille" disabled selected>
-                        Lentille
-                    </option>
-                    <option class="rouge" value="Rouge">    
-                        Rouge
-                    </option>
-                    <option class="bleue" value="Bleue">
-                        Bleue
-                    </option>
-                    <option class="vert" value="Verte">
-                        Verte
-                    </option>
-                    <option  class="blanc" value="Blanche">
-                        Blanche
-                    </option>
-                    <option class="noir" value="Noire">
-                        Noire
-                    </option>
-                </select>
-            </div>
-        </div>
-        <div class="bottomright">
-            <i id="bouton" class="fas fa-cart-arrow-down fa-7x"  class="addTo" onclick="add(3)"></i>
-        </div>
-        <p id="message3"></p>
-    </div>
-</div>
-
-<div id="blockproduit" class="mamiya">
-    <div class="blocktop">
-        <div class="topleft">
-           <img src="images/vcam_4.jpg">
-       </div>
-        <div class="topright">
-            <h1 class="tit" id="name4">
-                Camera Mamiya M
-            </h1>
-            <div class="prix4">
-                <p id="price4">
-                    99
-                </p>
-                <p>
-                    €
-                </p>
-            </div>
-            <p id="description">
-                La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.
-            </p>
-        </div>
-    </div>
-    <div class="blockbottom">
-        <div class="bottomleft">
-            <div class="inputs">
-                <input type="number" id="quantity4" name="quantity4" min="1" max="99" value="1">
-                <select id="lentille4" name="lentille4" onclick="deleteE('message4')">
-                    <option value="lentille" disabled selected>
-                        Lentille
-                    </option>
-                    <option class="rouge" value="Rouge">    
-                        Rouge
-                    </option>
-                    <option class="bleue" value="Bleue">
-                        Bleue
-                    </option>
-                    <option class="vert" value="Verte">
-                        Verte
-                    </option>
-                    <option  class="blanc" value="Blanche">
-                        Blanche
-                    </option>
-                    <option class="noir" value="Noire">
-                        Noire
-                    </option>
-                </select>
-            </div>
-        </div>
-        <div class="bottomright">
-            <i id="bouton" class="fas fa-cart-arrow-down fa-7x"  class="addTo" onclick="add(4)"></i>
-        </div>
-        <p id="message4"></p>
-    </div>
-</div>
-
-<div id="blockproduit" class="canon">
-    <div class="blocktop">
-        <div class="topleft">
-           <img src="images/vcam_5.jpg">
-       </div>
-        <div class="topright">
-            <h1 class="tit" id="name5">
-                Canon 310 M
-            </h1>
-            <div class="prix5">
-                <p id="price5">
-                    230
-                </p>
-                <p>
-                    €
-                </p>
-            </div>
-            <p id="description">
-                La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.
-            </p>
-        </div>
-    </div>
-    <div class="blockbottom">
-        <div class="bottomleft">
-            <div class="inputs">
-                <input type="number" id="quantity5" name="quantity5" min="1" max="99" value="1">
-                <select id="lentille5" name="lentille5" onclick="deleteE('message5')">
-                    <option value="lentille" disabled selected>
-                        Lentille
-                    </option>
-                    <option class="rouge" value="Rouge">    
-                        Rouge
-                    </option>
-                    <option class="bleue" value="Bleue">
-                        Bleue
-                    </option>
-                    <option class="vert" value="Verte">
-                        Verte
-                    </option>
-                    <option  class="blanc" value="Blanche">
-                        Blanche
-                    </option>
-                    <option class="noir" value="Noire">
-                        Noire
-                    </option>
-                </select>
-            </div>
-        </div>
-        <div class="bottomright">
-            <i id="bouton" class="fas fa-cart-arrow-down fa-7x"  class="addTo" onclick="add(5)"></i>
-        </div>
-        <p id="message5"></p>
-    </div>
-</div>
+    
+</script>
 
 <footer>
 	<p>

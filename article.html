@@ -6,8 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<meta name="description" content="Trouver la caméra qu'il vous faut sur Oriview">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-
-	
+    <link href="img/favicon.ico" rel="shortcut icon" />
+    <script src="index.js"></script>
+	<script src="JWDP5-master/app.js"></script>
+    <script src="JWDP5-master/serveur.js"></script>
+    <script src="JWDP5-master/package.json.js"></script>
+    <script src="JWDP5-master/models/camera.js"></script>
+    <script src="JWDP5-master/controllers/camera.js"></script>
+    <script src="JWDP5-master/routes/camera.js"></script>
 
 </head>
 
@@ -54,7 +60,7 @@
             </div>
         </div>
     </a>
-	<a class="aaa" href="produit.html" id="art2">
+	<a class="aaa" href="produit2.html" id="art2">
         <div class="article">
         	<img src="images/vcam_2.jpg">
             <h3 class="tit" id="name2">
@@ -70,7 +76,7 @@
         	</div>
         </div>
     </a>
-	<a class="aaa" href="produit.html" id="art3">
+	<a class="aaa" href="produit3.html" id="art3">
         <div class="article">
         	<img src="images/vcam_3.jpg">
             <h3 class="tit" id="name3">
@@ -86,7 +92,7 @@
         	</div>
         </div>
     </a>
-	<a class="aaa" href="produit.html" id="art4">
+	<a class="aaa" href="produit4.html" id="art4">
         <div class="article">
         	<img src="images/vcam_4.jpg">
             <h3 class="tit" id="name4">
@@ -102,7 +108,7 @@
         	</div>
         </div>
     </a>
-    <a class="aaa" href="produit.html" id="art5">
+    <a class="aaa" href="produit5.html" id="art5">
         <div class="article">
         	<img src="images/vcam_5.jpg">
             <h3 class="tit" id="name5">
@@ -120,8 +126,57 @@
     </a>
 </div>
 
-<script src="index.js"></script>
 
+
+
+<script>
+    var art1 = document.getElementById('art1');
+    art1.onclick = function(){
+        var name1 = document.getElementById("name1");
+        name1.innerHTML += "Camera FED 3";
+        var price1 = document.getElementById("price1");
+        price1.innerHTML += "48";
+        var description = document.getElementById("description");
+        description.innerHTML += "La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.";
+    }
+    var art2 = document.getElementById('art2');
+    art2.onclick = function(){
+        var name1 = document.getElementById("name1");
+        name1.innerHTML += "Camera Anex 1800";
+        var price1 = document.getElementById("price1");
+        price1.innerHTML += "112";
+        var description = document.getElementById("description");
+        description.innerHTML += "L'Anex 1800 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.";
+    }
+    var art3 = document.getElementById('art3');
+    art3.onclick = function(){
+        var name1 = document.getElementById("name1");
+        name1.innerHTML += "Camera Stramer 90'";
+        var price1 = document.getElementById("price1");
+        price1.innerHTML += "230";
+        var description = document.getElementById("description");
+        description.innerHTML += "La Stramer 90' a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.";
+    }
+    var art4 = document.getElementById('art4');
+    art4.onclick = function(){
+        var name1 = document.getElementById("name1");
+        name1.innerHTML += "Camera Mamiya M";
+        var price1 = document.getElementById("price1");
+        price1.innerHTML += "99";
+        var description = document.getElementById("description");
+        description.innerHTML += "La Mamiya M a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.";
+    }
+    var art5 = document.getElementById('art5');
+    art5.onclick = function(){
+        var name1 = document.getElementById("name1");
+        name1.innerHTML += "Canon 310 M";
+        var price1 = document.getElementById("price1");
+        price1.innerHTML += "230";
+        var description = document.getElementById("description");
+        description.innerHTML += "La Canon 310 M a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.";
+    }
+
+</script>
 <footer>
 	<p>
 		Tout droits réservés-2019-2020 Orinoco

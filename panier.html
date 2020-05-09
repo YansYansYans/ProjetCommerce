@@ -6,8 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<meta name="description" content="Trouver la caméra qu'il vous faut sur Oriview">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-	
+	<link href="img/favicon.ico" rel="shortcut icon" />
 	<script src="index.js"></script>
+	<script src="JWDP5-master/app.js"></script>
+    <script src="JWDP5-master/serveur.js"></script>
+    <script src="JWDP5-master/package.json.js"></script>
+    <script src="JWDP5-master/models/camera.js"></script>
+    <script src="JWDP5-master/controllers/camera.js"></script>
+    <script src="JWDP5-master/routes/camera.js"></script>
+    
 </head>
 
 <body class="panier">
@@ -40,21 +47,21 @@
 
 			<p class="prenomnom">
 				<label for="prenom">Prénom</label>
-				<input type="text" name="prenom" id="prenom" required="">
+				<input type="text" name="prenom" id="prenom" required="" onchange="sessionStorage.prenom=this.value">
 				<label for="nom">Nom</label>
-				<input type="text" name="nom" id="nom" required="">
+				<input type="text" name="nom" id="nom" required="" onchange="sessionStorage.nom=this.value">
 			</p>
 			<p>
 				<label for="email">Email</label>
-				<input type="email" name="email" id="email" required="">
+				<input type="email" name="email" id="email" required="" onchange="sessionStorage.email=this.value">
 				<label for="telephone">Téléphone</label>
-				<input type="tel" name="telephone" id="telephone" required="">
+				<input type="tel" name="telephone" id="telephone" required="" onchange="sessionStorage.telephone=this.value">
 			</p>
 			<p>
 				<label for="rue">N et Rue</label>
-				<input type="text" name="rue" id="rue" required="">
+				<input type="text" name="rue" id="rue" required="" onchange="sessionStorage.rue=this.value">
 				<label for="ville">Ville</label>
-				<input type="text" name="ville" id="ville" required="">
+				<input type="text" name="ville" id="ville" required="" onchange="sessionStorage.ville=this.value">
 			</p>
 			<p class="pays">
 				<label for="pays">Pays</label>
@@ -133,6 +140,49 @@
 	    e.preventDefault(); // Annulation de l'envoi des données
 	});
 		
+	// Sauvegarde Formulaire
+	if(typeof sessionStorage!='undefined') {
+		if('prenom' in sessionStorage) {
+		document.getElementById('prenom').value = sessionStorage.getItem('prenom');
+		}
+	} else {
+		alert("sessionStorage n'est pas supporté");
+	}
+	if(typeof sessionStorage!='undefined') {
+		if('nom' in sessionStorage) {
+		document.getElementById('nom').value = sessionStorage.getItem('nom');
+		}
+	} else {
+		alert("sessionStorage n'est pas supporté");
+	}
+	if(typeof sessionStorage!='undefined') {
+		if('email' in sessionStorage) {
+		document.getElementById('email').value = sessionStorage.getItem('email');
+		}
+	} else {
+		alert("sessionStorage n'est pas supporté");
+	}
+	if(typeof sessionStorage!='undefined') {
+		if('telephone' in sessionStorage) {
+		document.getElementById('telephone').value = sessionStorage.getItem('telephone');
+		}
+	} else {
+		alert("sessionStorage n'est pas supporté");
+	}
+	if(typeof sessionStorage!='undefined') {
+		if('rue' in sessionStorage) {
+		document.getElementById('rue').value = sessionStorage.getItem('rue');
+		}
+	} else {
+		alert("sessionStorage n'est pas supporté");
+	}
+	if(typeof sessionStorage!='undefined') {
+		if('ville' in sessionStorage) {
+		document.getElementById('ville').value = sessionStorage.getItem('ville');
+		}
+	} else {
+		alert("sessionStorage n'est pas supporté");
+	}
 </script>
 
 <footer>
