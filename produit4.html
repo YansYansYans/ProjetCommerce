@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="description" content="Trouver la caméra qu'il vous faut sur Oriview">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="img/favicon.ico" rel="shortcut icon" />
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="index.js"></script>
     <script src="JWDP5-master/app.js"></script>
@@ -22,24 +23,31 @@
     <a href="index.html">
         <img class="titre" src="img/oriview.png">
     </a>
-    <div class="cart">
-        <a class="logopanier" href="panier.html">
-            <i class="fas fa-shopping-cart fa-2x"></i>
-        </a>
-        <div class="pp">
-            <h3 class="tit">
-                Mon Panier
-            </h3>
-            <!-- Liste des Articles dans le panier -->
-            <ul id="show-cart">
-                <li></li>
-            </ul>
-            <div>Vous avez <span id="count-cart">X</span> Article(s) dans votre panier</div>
-            <div>Total : € <span id="total-cart"></span></div>
-        </div>
-    </div>
 </header>
-
+<div class="miniheader">
+    <ul>
+        <li>
+            <a href="#">
+                M A G A S I N S
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                H I S T O I R E 
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                C O N T A C T 
+            </a>
+        </li>
+        <li>
+            <a href="panier.html">
+                P A N I E R
+            </a>
+        </li>
+    </ul>
+</div>
 
 <div id="blockproduit">
     <div class="blocktop">
@@ -47,26 +55,29 @@
            <img src="images/vcam_4.jpg">
        </div>
         <div class="topright">
-            <h1 class="tit" id="name4">
+            <h1 class="tit">
                 Camera Mamiya M
             </h1>
-            <div class="prix4">
-                <p id="price4">
-                    99
-                </p>
-                <p>
-                    €
-                </p>
+            <div class="prix1">
+                99.99 €
             </div>
-            <p id="description">
-                La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.
+            <p>
+                Le premier reflex numerique couleur. Pour l'époque c'était une vrai bombe notamment avec ses différents modes et personnalisation. 
             </p>
+            <span>
+                Livraison Rapide
+                <br>
+                Produit Recommandé par les cliens
+                <br>
+                Année : 1995
+                <br>
+                2,9 étoiles
+            </span>
         </div>
     </div>
     <div class="blockbottom">
         <div class="bottomleft">
             <div class="inputs">
-                <input type="number" id="quantity4" name="quantity4" min="1" max="99" value="1">
                 <select id="lentille4" name="lentille4" onclick="deleteE('message4')">
                     <option value="lentille" disabled selected>
                         Lentille
@@ -90,7 +101,9 @@
             </div>
         </div>
         <div class="bottomright">
-            <i id="bouton" class="fas fa-cart-arrow-down fa-7x"  class="addTo" onclick="add(4)"></i>
+            <a class="add-to-cart addprod" href="#" data-name="Camera Mamiya M" data-price="99.99">
+                Ajouter au panier
+            </a>
         </div>
         <p id="message4"></p>
     </div>

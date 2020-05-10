@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="description" content="Trouver la caméra qu'il vous faut sur Oriview">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="img/favicon.ico" rel="shortcut icon" />
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="index.js"></script>
     <script src="JWDP5-master/app.js"></script>
@@ -22,23 +23,31 @@
     <a href="index.html">
         <img class="titre" src="img/oriview.png">
     </a>
-    <div class="cart">
-        <a class="logopanier" href="panier.html">
-            <i class="fas fa-shopping-cart fa-2x"></i>
-        </a>
-        <div class="pp">
-            <h3 class="tit">
-                Mon Panier
-            </h3>
-            <!-- Liste des Articles dans le panier -->
-            <ul id="show-cart">
-                <li></li>
-            </ul>
-            <div>Vous avez <span id="count-cart">X</span> Article(s) dans votre panier</div>
-            <div>Total : € <span id="total-cart"></span></div>
-        </div>
-    </div>
 </header>
+<div class="miniheader">
+    <ul>
+        <li>
+            <a href="#">
+                M A G A S I N S
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                H I S T O I R E 
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                C O N T A C T 
+            </a>
+        </li>
+        <li>
+            <a href="panier.html">
+                P A N I E R
+            </a>
+        </li>
+    </ul>
+</div>
 
 
 <div id="blockproduit">
@@ -47,26 +56,29 @@
            <img src="images/vcam_3.jpg">
        </div>
         <div class="topright">
-            <h1 class="tit" id="name3">
+            <h1 class="tit">
                 Camera Stramer 90'
             </h1>
-            <div class="prix3">
-                <p id="price3">
-                    230
-                </p>
-                <p>
-                    €
-                </p>
+            <div class="prix1">
+                230.90 €
             </div>
-            <p id="description">
-                La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet fou dans les années 70' après que sa promotion dans une pub avec Mickael Jordan.
+            <p>
+                C'est la camera la plus ancienne de tout le site. Ce modèle aurait appartenu au grand Napoleon et lui aurait permit de faire son portrait. Malheureusement il en reste très peu d'exemplaire.
             </p>
+            <span>
+                Livraison Rapide
+                <br>
+                Produit Recommandé par les cliens
+                <br>
+                Année : 1800
+                <br>
+                4,9 étoiles
+            </span>
         </div>
     </div>
     <div class="blockbottom">
         <div class="bottomleft">
             <div class="inputs">
-                <input type="number" id="quantity3" name="quantity3" min="1" max="99" value="1">
                 <select id="lentille3" name="lentille3" onclick="deleteE('message3')">
                     <option value="lentille" disabled selected>
                         Lentille
@@ -90,8 +102,8 @@
             </div>
         </div>
         <div class="bottomright">
-            <a class="add-to-cart" href="#" data-name="Camera Stramer 90" data-price="230.90">
-                    Ajouter au panier
+            <a class="add-to-cart addprod" href="#" data-name="Camera Stramer 90" data-price="230.90">
+                Ajouter au panier
             </a>
         </div>
         <p id="message3"></p>

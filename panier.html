@@ -25,24 +25,54 @@
 		<img class="titre" src="img/oriview.png">
 	</a>
 </header>
+<div class="miniheader">
+	<ul>
+		<li>
+			<a href="#">
+				M A G A S I N S
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				H I S T O I R E 
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				C O N T A C T 
+			</a>
+		</li>
+		<li>
+			<a href="panier.html">
+				P A N I E R
+			</a>
+		</li>
+	</ul>
+</div>
 
 <div class="blockpanier">
 	<div class="panierfinal">
-		<h1>
-			Mon Panier
-		</h1>
-        <h3 class="tit">
-        	Mon Panier
-        </h3>
+		<div class="paniertop">
+			<h1>
+				Mon Panier
+			</h1>
+			<div class="tt">
+	        	Total : € <span id="total-cart"></span>
+	        </div>
+        </div>
         <!-- Liste des Articles dans le panier -->
         <ul id="show-cart">
-                <li></li>
-            </ul>
-            <div>Vous avez <span id="count-cart">X</span> Article(s) dans votre panier</div>
-            <div>Total : € <span id="total-cart"></span></div>
+            <li>
+            	
+            </li>
+        </ul>
+        <div class="nombre">
+        	Vous avez <span id="count-cart">X</span> Article(s) dans votre panier
+        </div>
+        
     </div>
 	<div class="formulaire">
-		<form method="post">
+		<form method="post" action="confirmation.html">
 			<legend>
 				Enregistrez votre Commande
 			</legend>
@@ -139,7 +169,7 @@
 	    default:
 	        console.log("Erreur : code de nationalité non reconnu");
 	    }
-	    e.preventDefault(); // Annulation de l'envoi des données
+
 	});
 		
 	// Sauvegarde Formulaire
