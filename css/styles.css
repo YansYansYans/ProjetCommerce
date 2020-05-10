@@ -198,7 +198,18 @@ footer {
   opacity: 60%;
   transition: 500ms;
 }
+.bottomright p {
+  display: none;
+  text-align: center;
+  color: red;
+}
+.bottomright:active:active p {
+  display: block;
+}
 
+.panier .miniheader a {
+  font-size: 0.8em;
+}
 #blockpanier {
   width: 80%;
   margin-left: auto;
@@ -243,8 +254,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
-  box-shadow: 0px 0px 5px;
-  border-radius: 10px;
+  border: 2px #B0BEC5 solid;
   margin-bottom: 200px;
   flex-wrap: wrap;
 }
@@ -254,37 +264,47 @@ footer {
   font-weight: bold;
   margin-bottom: 50px;
 }
+.inputtop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.inputleft, .inputright {
+  display: flex;
+  flex-direction: column;
+}
 .formulaire input {
   width: 200px;
-  border-radius: 5px;
 }
-.formulaire p {
-  display: flex;
-  justify-content: space-around;
-  font-size: 1.2em;
-  flex-wrap: wrap;
+.inputbottom {
+  width: 71%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .formulaire .pays {
   display: flex;
   justify-content: flex-start;
-  margin-left: 40px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.formulaire .pays select {
-  margin-left: 40px;
+.pays select {
+  margin-left: 50px;
 }
 .formulaire .condition {
   display: flex;
   justify-content: flex-start;
-  margin-left: 40px;
   font-weight: bold;
   margin-bottom: 50px;
 }
 .formulaire .commander {
   margin-bottom: 50px;
+  background-color: #D84315;
+  color: white;
 }
-
+.formulaire .commander:hover {
+  opacity: 80%;
+  transition: 500ms;
+}
 #blockconfirmation {
   margin-bottom: 200px;
 }
@@ -497,7 +517,7 @@ footer {
     border-color: black;
     font-size: 1em;
   }
-  .formulaire p {
+  .formulaire label {
     font-size: 2.5em;
   }
   .formulaire .pays {

@@ -28,17 +28,17 @@
 <div class="miniheader">
 	<ul>
 		<li>
-			<a href="#">
+			<a href="index.html">
 				M A G A S I N S
 			</a>
 		</li>
 		<li>
-			<a href="#">
+			<a href="https://fr.wikipedia.org/wiki/Orinoco" target="_BLANK">
 				H I S T O I R E 
 			</a>
 		</li>
 		<li>
-			<a href="#">
+			<a href="mailto:orinoco@gmail.com">
 				C O N T A C T 
 			</a>
 		</li>
@@ -76,42 +76,45 @@
 			<legend>
 				Enregistrez votre Commande
 			</legend>
+			<div class="inputtop">
+				<div class="inputleft">
+					<label for="prenom">Prénom</label>
+					<input type="text" name="prenom" id="prenom" required="" onchange="sessionStorage.prenom=this.value">
+					<label for="nom">Nom</label>
+					<input type="text" name="nom" id="nom" required="" onchange="sessionStorage.nom=this.value">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" required="" onchange="sessionStorage.email=this.value">
+				</div>
+				<div class="inputright">
+					<label for="telephone">Téléphone</label>
+					<input type="tel" name="telephone" id="telephone" required="" onchange="sessionStorage.telephone=this.value">
+					<label for="rue">N et Rue</label>
+					<input type="text" name="rue" id="rue" required="" onchange="sessionStorage.rue=this.value">
+					<label for="ville">Ville</label>
+					<input type="text" name="ville" id="ville" required="" onchange="sessionStorage.ville=this.value">
+				</div>
+			</div>
+			<div class="inputbottom">
+				<div class="pays">
+					<label for="pays">Pays</label>
+					<select name="pays" id="pays" required="">
+						<option value="france">France</option>
+						<option value="usa">Etats-Unis</option>
+						<option value="angletterre">Angletterre</option>
+						<option value="suisse">Suisse</option>
+						<option value="espagne">Espagne</option>
+					</select>
+				</div>
 
-			<p class="prenomnom">
-				<label for="prenom">Prénom</label>
-				<input type="text" name="prenom" id="prenom" required="" onchange="sessionStorage.prenom=this.value">
-				<label for="nom">Nom</label>
-				<input type="text" name="nom" id="nom" required="" onchange="sessionStorage.nom=this.value">
-			</p>
-			<p>
-				<label for="email">Email</label>
-				<input type="email" name="email" id="email" required="" onchange="sessionStorage.email=this.value">
-				<label for="telephone">Téléphone</label>
-				<input type="tel" name="telephone" id="telephone" required="" onchange="sessionStorage.telephone=this.value">
-			</p>
-			<p>
-				<label for="rue">N et Rue</label>
-				<input type="text" name="rue" id="rue" required="" onchange="sessionStorage.rue=this.value">
-				<label for="ville">Ville</label>
-				<input type="text" name="ville" id="ville" required="" onchange="sessionStorage.ville=this.value">
-			</p>
-			<p class="pays">
-				<label for="pays">Pays</label>
-				<select name="pays" id="pays" required="">
-					<option value="france">France</option>
-					<option value="usa">Etats-Unis</option>
-					<option value="angletterre">Angletterre</option>
-					<option value="suisse">Suisse</option>
-					<option value="espagne">Espagne</option>
-				</select>
-			</p>
-			<p class="condition">
-				<label for="condition">J'accepte avoir lu les Conditions Générales d'utilisation.</label>
-				<input type="checkbox" name="condition" id="condition" required="">
-			</p>
-			<p>
-			<input class="commander" type="submit" name="commander" value="Commander">
-			</p>
+				<div class="condition">
+					<label for="condition">J'accepte avoir lu les Conditions Générales d'utilisation.</label>
+					<input type="checkbox" name="condition" id="condition" required="">
+				</div>
+
+				<div>
+				<input class="commander" type="submit" name="commander" value="Commander">
+				</div>
+			</div>
 		</form>
 	</div>
 </div>
