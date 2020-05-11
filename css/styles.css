@@ -258,6 +258,11 @@ footer {
   list-style-type: none;
   font-size: 1.5em;
 }
+.panier li button {
+    border-radius: 50px;
+    background-color: #78909C;
+    color: white;
+  }
 .nombre {
   text-align: center;
   margin-bottom: 10px;
@@ -518,6 +523,13 @@ footer {
     list-style-type: none;
     font-size: 4em;
   }
+  .panier li button {
+    border-radius: 50px;
+    font-size: 1em;
+    width: 80px;
+    background-color: #78909C;
+    color: white;
+  }
   .btn-danger {
     font-size: 3em;
     margin-left: auto;
@@ -541,6 +553,12 @@ footer {
     border-color: black;
     font-size: 1em;
   }
+  input {
+    font-size: 0.6em;
+  }
+  #prenom, #nom, #telephone, #email, #rue, #ville {
+    font-size: 2em;
+  }
   .formulaire label {
     font-size: 2.5em;
   }
@@ -551,7 +569,7 @@ footer {
   }
   .formulaire .pays select {
     margin-left: 80px;
-    font-size: 1.2em;
+    font-size: 2em;
     border-color: black;
   }
   .formulaire .condition {
@@ -563,7 +581,7 @@ footer {
   }
   .formulaire .commander {
     margin-bottom: 50px;
-    font-size: 1.2em;
+    font-size: 3em;
     height: 100px;
     width: 300px;
     background-color: #D84315;
@@ -598,4 +616,6 @@ footer {
     font-weight: normal;
     color: red;
   }
+
+  
 }
