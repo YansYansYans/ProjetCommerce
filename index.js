@@ -3,10 +3,11 @@
     // Méthode
         var cart = [];
     // Création de la fonction article serveur
-        function Item(name, price, count, description, imageUrl) {
+        function Item(name, price, count, lenses, description, imageUrl) {
             this.name = name
             this.price = price
             this.count = count
+            this.lenses = lenses
             this.description = description
             this.imageUrl = imageUrl
         }
@@ -29,7 +30,7 @@
 // Chargement de l'objet demandé
     var obj = {};
 // Ajoute ses 3 fonctions de l'article au panier
-    obj.addItemToCart = function (name, price, count) {
+    obj.addItemToCart = function (name, price, count, lenses) {
         for (var i in cart) {
             if (cart[i].name === name) {
                 cart[i].count += count;
@@ -38,9 +39,9 @@
             }
         }
 
-        console.log("addItemToCart:", name, price, count);
+        console.log("addItemToCart:", name, price, count, lenses);
 
-        var item = new Item(name, price, count);
+        var item = new Item(name, price, count, lenses);
         cart.push(item);
         saveCart();
     };
@@ -129,5 +130,3 @@
 
 
 
-
-       

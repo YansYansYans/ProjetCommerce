@@ -77,39 +77,56 @@
     </div>
     <div class="blockbottom">
         <div class="bottomleft">
-            <div class="inputs">
-                <select id="lentille2" name="lentille2" onclick="deleteE('message2')">
-                    <option value="lentille" disabled selected>
-                        Lentille
-                    </option>
-                    <option class="rouge" value="Rouge">    
-                        Rouge
-                    </option>
-                    <option class="bleue" value="Bleue">
-                        Bleue
-                    </option>
-                    <option class="vert" value="Verte">
-                        Verte
-                    </option>
-                    <option  class="blanc" value="Blanche">
-                        Blanche
-                    </option>
-                    <option class="noir" value="Noire">
-                        Noire
-                    </option>
-                </select>
-            </div>
+            <button id="btnr">Rouge</button>
+            <button id="btnb">Bleue</button>
+            <button id="btnv">Verte</button>
         </div>
         <div class="bottomright">
-            <a class="add-to-cart addprod" href="#" data-name="Camera Anex 1800" data-price="111.89">
+            <a class="add-to-cart addprod d1" href="#" data-name="Camera Anex 1800 / Lentille : Rouge" data-price="111.89">
                 Ajouter au panier
-            </a>
+            </a><style>.d1 {display: none;} .d11 {display: block;}</style>
+            <a class="add-to-cart addprod d2" href="#" data-name="Camera Anex 1800 / Lentille : Bleue" data-price="111.89">
+                Ajouter au panier
+            </a><style>.d2 {display: none;} .d22 {display: block;}</style>
+            <a class="add-to-cart addprod d3" href="#" data-name="Camera Anex 1800 / Lentille : Verte" data-price="111.89">
+                Ajouter au panier
+            </a><style>.d3 {display: none;} .d33 {display: block;}</style>
+            <p>
+                AJOUTER
+            </p>
         </div>
-        <p id="message2"></p>
     </div>
 </div>
 
 <script>
+var btnr = document.getElementById('btnr');
+btnr.onclick = function(){
+    var carre = document.querySelector('.d1');
+    carre.classList.toggle('d11');
+    var carre2 = document.querySelector('.d2');
+    carre2.classList.remove('d22');
+    var carre3 = document.querySelector('.d3');
+    carre3.classList.remove('d33');
+}
+var btnb = document.getElementById('btnb');
+btnb.onclick = function(){
+    var rond = document.querySelector('.d2');
+    rond.classList.toggle('d22');
+    var rond2 = document.querySelector('.d1');
+    rond2.classList.remove('d11');
+    var rond3 = document.querySelector('.d3');
+    rond3.classList.remove('d33');
+}
+var btnv = document.getElementById('btnv');
+btnv.onclick = function(){
+    var cercle = document.querySelector('.d3');
+    cercle.classList.toggle('d33');
+    var cercle2 = document.querySelector('.d2');
+    cercle2.classList.remove('d22');
+    var cercle3 = document.querySelector('.d1');
+    cercle3.classList.remove('d11');
+}
+
 $(".add-to-cart").click(function(event){
             event.preventDefault();
             var name = $(this).attr("data-name");
