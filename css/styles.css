@@ -170,29 +170,41 @@ footer {
   font-style: italic;
   font-size: 0.8em;
 }
+.blockbottom {
+  margin-top: -70px;
+}
 .bottomleft {
   width: 70%;
+  flex-wrap: wrap;
 }
-.bottomleft h2 {
-  margin-left: 50px;
-}
-.inputs {
-  margin-left: 10%;
-}
-.inputs input {
-  font-size: 1.1em;
+.bottomleft button {
+  padding: 10px;
+  color: white;
+  width: 100px;
   border-radius: 5px;
 }
-.inputs select {
-  font-size: 1.2em;
-  border-radius: 5px;
-  margin-left: 50px;
+.bottomleft .attention {
+    font-size: 0.6em;
+    color: red;
+}
+.bottomleft button:hover {
+  opacity: 70%;
+}
+#btnr {
+  background-color: #f44336;
+}
+#btnb {
+  background-color: #2196F3;
+}
+#btnv {
+  background-color: #4CAF50;
 }
 .addprod {
   background-color: #D84315;
   padding: 10px;
   font-size: 1.2em;
   color: white;
+  margin-top: 70px;
 }
 .addprod:hover {
   opacity: 60%;
@@ -448,7 +460,7 @@ footer {
     font-size: 4em;
     color: #D84315;
   }
-  #blockproduit span {
+  #blockproduit .infos {
     font-size: 2em;
     color: #D84315;
   }
@@ -472,17 +484,21 @@ footer {
   .blockbottom {
     flex-direction: column;
   }
-  .inputs {
-  margin-left: 0%;
-  margin-bottom: 100px;
-    }
-  .inputs select {
+  .bottomleft h2 {
     font-size: 5em;
-    border-radius: 20px;
-    margin-left: 0px;
+  }
+  .bottomleft .attention {
+    font-size: 0.8em;
+  }
+  .bottomleft button {
+  padding: 10px;
+  width: 300px;
+  border-radius: 20px;
+  font-size: 5em;
   }
   .addprod {
     font-size: 4em;
+    text-align: center;
   }
 
   .panier li a {
@@ -501,6 +517,14 @@ footer {
   .panier li {
     list-style-type: none;
     font-size: 4em;
+  }
+  .btn-danger {
+    font-size: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 25%;
   }
   .formulaire {
     width: 80%;
