@@ -195,7 +195,7 @@ footer {
   flex-wrap: wrap;
 }
 
-legend {
+.titlesave {
   text-align: center;
   font-size: 2em;
   font-weight: bold;
@@ -361,7 +361,7 @@ input {
     width: 90%;
   }
 
-  legend {
+  .titlesave {
     font-size: 4em;
   }
 

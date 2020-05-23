@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <title>Orinoco - Panier</title>
 
@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="img/favicon.ico" rel="shortcut icon" />
 
-    <script type="text/javascript" src="panier.js"></script>
+    <script src="panier.js"></script>
 </head>
 
 <body class="panier" onload="panier()">
 
    <header>
         <a href="index.html">
-            <img class="titre" src="img/oriview.png">
+            <img class="titre" src="img/oriview.png" alt="Accueil">
         </a>
     </header>
 
@@ -49,34 +49,34 @@
     <div id="panierpanier">
         <div id="panierfinal">
             <div id="confirme">
-                
+               
             </div>
             <section id="achatfinal">
-                <article id="panier">
+                <div id="panier">
                     <h2 id="modif">
                         Panier
                     </h2>
                     <p id="paniervide">
                         Panier Vide : Veuillez ajouter un article pour commander
                     </p>
-                </article>
-                <article id="prixtotal">
+                </div>
+                <div id="prixtotal">
                     <h2>
                         Total :
                     </h2>
-                </article>
+                </div>
             </section>
         </div>
 
         <div id="formulairefinal">
-            <section id="viderpanier">
+            <div id="viderpanier">
                 <button id="detele" onclick="clean()">
                     Vider le panier
                 </button>
-                <article id="formulaire">
-                    <legend> 
+                <div id="formulaire">
+                    <div class="titlesave"> 
                         Enregistrez votre Commande 
-                    </legend>
+                    </div>
                     <form>
                         <div class="inputtop">
                             <div class="inputleft">
@@ -97,14 +97,14 @@
                             </div>
                         </div>
                     </form>
-                    <button id="send" onclick="sendData()" />
+                    <button id="send" onclick="sendData()">
                         Commander
                     </button>
-                </article>
-            </section>
+                </div>
+            </div>
             <div id="commande">
                 <h2>
-                    
+                    Numero
                 </h2>
             </div>
         </div>
