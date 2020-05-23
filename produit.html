@@ -1,199 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Orinoco</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<meta name="description" content="Trouver la caméra qu'il vous faut sur Oriview">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <title>Orinoco - Produit</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Trouver la caméra qu'il vous faut sur Orinoco">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="img/favicon.ico" rel="shortcut icon" />
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="app.js"></script>
-    <script src="JWDP5-master/app.js"></script>
-    <script src="JWDP5-master/serveur.js"></script>
-    <script src="JWDP5-master/package.json.js"></script>
-    <script src="JWDP5-master/models/camera.js"></script>
-    <script src="JWDP5-master/controllers/camera.js"></script>
-    <script src="JWDP5-master/routes/camera.js"></script>
-    
+
+    <script type="text/javascript" src="produit.js"></script>
 </head>
 
-<body class="produit">
+<body onload="recup()">
 
-<header>
-	<a href="index.html">
-		<img class="titre" src="img/oriview.png">
-	</a>
-	<div class="cart">
-        <a class="logopanier" href="panier.html">
-            <i class="fas fa-shopping-cart fa-2x"></i>
+    <header>
+        <a href="index.html">
+            <img class="titre" src="img/oriview.png">
         </a>
-        <div class="pp">
-            <h3 class="tit">
-                Mon Panier
-            </h3>
-            <!-- Liste des Articles dans le panier -->
-            <ul id="show-cart">
-                <li></li>
-            </ul>
-            <div>Vous avez <span id="count-cart">X</span> Article(s) dans votre panier</div>
-            <div>Total : € <span id="total-cart"></span></div>
-        </div>
+    </header>
+
+    <div class="miniheader">
+        <ul>
+            <li>
+                <a href="index.html">
+                    M A G A S I N S
+                </a>
+            </li>
+            <li>
+                <a href="https://fr.wikipedia.org/wiki/Orinoco" target="_BLANK">
+                    H I S T O I R E 
+                </a>
+            </li>
+            <li>
+                <a href="mailto:orinoco@gmail.com">
+                    C O N T A C T 
+                </a>
+            </li>
+            <li>
+                <a href="panier.html">
+                    P A N I E R
+                </a>
+            </li>
+        </ul>
     </div>
-</header>
 
-
-<div id="blockproduit" class="fed">
-	<div class="blocktop">
-        <div class="topleft">
-    	   <img src="images/vcam_1.jpg">
-       </div>
-        <div class="topright">
-            <h1 class="tit" id="name1">
-            	
-            </h1>
-            <div class="prix1">
-                <p id="price1">
-                	
-           		</p>
-                <p>
-                	€
-                </p>
-            </div>
-            <p id="description">
-                
-            </p>
-        </div>
-    </div>
-    <div class="blockbottom">
-        <div class="bottomleft">
-            <div class="inputs">
-                <input type="number" id="quantity1" name="quantity1" min="1" max="99" value="1">
-                <select id="lentille1" name="lentille1" onclick="deleteE('message1')">
-                    <option value="lentille" disabled selected>
-                    	Lentille
-                    </option>
-                    <option class="rouge" value="Rouge">	
-                    	Rouge
-                    </option>
-                    <option class="bleue" value="Bleue">
-                    	Bleue
-                    </option>
-                    <option class="vert" value="Verte">
-                    	Verte
-                    </option>
-                    <option  class="blanc" value="Blanche">
-                    	Blanche
-                    </option>
-                    <option class="noir" value="Noire">
-                    	Noire
-                    </option>
-                </select>
-            </div>
-        </div>
-        <div class="bottomright">
-            <i id="bouton" class="fas fa-cart-arrow-down fa-7x"  class="addTo" onclick="add(1)"></i>
-        </div>
-        <p id="message1"></p>
-    </div>
-</div>
-
-
-
-
-                <a class="add-to-cart" href="#" data-name="Camera FED 3" data-price="48.99"> Camera FED 3 - <span>48.99€</span></a>
-                <a class="add-to-cart" href="#" data-name="Camera Anex 1800" data-price="111.89">Camera Anex 1800 - <span>111.89€</span></a>
-                <a class="add-to-cart" href="#" data-name="Camera Stramer 90" data-price="230.90">Camera Stramer 90' - <span>230.90€</span></a>
-                <a class="add-to-cart" href="#" data-name="Camera Mamiya M" data-price="99.99">Camera Mamiya M - <span>99.99€</span></a>
-                <a class="add-to-cart" href="#" data-name="Canon 310 M" data-price="230.75">Canon 310 M - <span>230.75€</span></a>
-   
-
-<script src="index.js"></script>
-
-<script>
-   
-
-            $(".add-to-cart").click(function(event){
-                event.preventDefault();
-                var name = $(this).attr("data-name");
-                var price = Number($(this).attr("data-price"));
-
-                shoppingCart.addItemToCart(name, price, 1);
-                displayCart();
-            });
-
-            $("#clear-cart").click(function(event){
-                shoppingCart.clearCart();
-                displayCart();
-            });
-
-            function displayCart() {
-                var cartArray = shoppingCart.listCart();
-                console.log(cartArray);
-                var output = "";
-
-                for (var i in cartArray) {
-                    output += "<li>"
-                        +cartArray[i].name
-                        +" <input class='item-count' type='number' data-name='"
-                        +cartArray[i].name
-                        +"' value='"+cartArray[i].count+"' >"
-                        +" x "+cartArray[i].price
-                        +" = "+cartArray[i].total
-                        +" <button class='plus-item' data-name='"
-                        +cartArray[i].name+"'>+</button>"
-                        +" <button class='subtract-item' data-name='"
-                        +cartArray[i].name+"'>-</button>"
-                        +" <button class='delete-item' data-name='"
-                        +cartArray[i].name+"'>X</button>"
-                        +"</li>";
-                }
-
-                $("#show-cart").html(output);
-                $("#count-cart").html( shoppingCart.countCart() );
-                $("#total-cart").html( shoppingCart.totalCart() );
-            }
-
-            $("#show-cart").on("click", ".delete-item", function(event){
-                var name = $(this).attr("data-name");
-                shoppingCart.removeItemFromCartAll(name);
-                displayCart();
-            });
-
-            $("#show-cart").on("click", ".subtract-item", function(event){
-                var name = $(this).attr("data-name");
-                shoppingCart.removeItemFromCart(name);
-                displayCart();
-            });
-
-            $("#show-cart").on("click", ".plus-item", function(event){
-                var name = $(this).attr("data-name");
-                shoppingCart.addItemToCart(name, 0, 1);
-                displayCart();
-            });
-
-            $("#show-cart").on("change", ".item-count", function(event){
-                var name = $(this).attr("data-name");
-                var count = Number($(this).val());
-                shoppingCart.setCountForItem(name, count);
-                displayCart();
-            });
-
-
-            displayCart();
+    <main id="blockproduit">
+        <section id="camera">
+            <article id="infos">
+                <div id="lentille">
+                    <p>
+                        Selectionnez une lentille
+                    </p>
+                    <select id="choisirlentille">
+                        
+                    </select>
+                </div>
+                <button onclick="add()">
+                    Ajouter au panier
+                </button>
+            </article>
+        </section>
+    </main>
     
-</script>
-
-<footer>
-	<p>
-		Tout droits réservés-2019-2020 Orinoco
-	</p>
-	<p>
-		Réalisé par OrinocoSociaty
-	</p>
-</footer>
-
+    <footer>
+        <p>
+            Tout droits réservés-2019-2020 Orinoco
+        </p>
+        <p>
+            Réalisé par OrinocoSociaty
+        </p>
+    </footer>
 
 </body>
-
 </html>

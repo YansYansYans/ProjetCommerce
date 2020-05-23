@@ -1,243 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Orinoco</title>
+	<title>Orinoco - Accueil</title>
+
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<meta name="description" content="Trouver la caméra qu'il vous faut sur Orinoco">
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	<link href="img/favicon.ico" rel="shortcut icon" />
-	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="index.js"></script>
-	<script src="JWDP5-master/app.js"></script>
-    <script src="JWDP5-master/serveur.js"></script>
-    <script src="JWDP5-master/package.json.js"></script>
-    <script src="JWDP5-master/models/camera.js"></script>
-    <script src="JWDP5-master/controllers/camera.js"></script>
-    <script src="JWDP5-master/routes/camera.js"></script>
+
+	<script type="text/javascript" src="index.js"></script>
 </head>
 
-<body>
+<body onload="recup()">
 
-<header>
-	<a href="index.html">
-		<img class="titre" src="img/oriview.png">
-	</a>
-</header>
-<div class="miniheader">
-	<ul>
-		<li>
-			<a href="index.html">
-				M A G A S I N S
-			</a>
-		</li>
-		<li>
-			<a href="https://fr.wikipedia.org/wiki/Orinoco" target="_BLANK">
-				H I S T O I R E 
-			</a>
-		</li>
-		<li>
-			<a href="mailto:orinoco@gmail.com">
-				C O N T A C T 
-			</a>
-		</li>
-		<li>
-			<a href="panier.html">
-				P A N I E R
-			</a>
-		</li>
-	</ul>
-</div>
+	<header>
+		<a href="index.html">
+			<img class="titre" src="img/oriview.png">
+		</a>
+	</header>
 
-<div class="nosproduit">
-	<h1>
-		NOS PRODUITS
-	</h1>
-</div>
-
-<div class="container">
-	<div class="aaa">
-		<div class="article">
-        	<img src="images/vcam_1.jpg">
-            <h3 class="tit">
-            	Camera FED 3 - <span class="prixleft">48.99 €</span><br><span class="spandescription">La FED 3 a été crée en 1967, c'est le premier reflex numerique. Il connait un succet...</span>
-            </h3>
-            <div class="invisible">
-                <a class="savoir" href="produit1.html">
-                    En savoir plus
-                </a>
-            </div>
-        </div>
-    </div>
-	<div class="aaa">
-        <div class="article">
-        	<img src="images/vcam_2.jpg">
-            <h3 class="tit">
-            	Camera Anex 1800 - <span class="prixleft">111.89 €</span><br><span class="spandescription">On compare souvent ce modèle à celui qui a révolutionné le monde. En effet...</span>
-            </h3>
-            <div class="invisible">
-                <a class="savoir" href="produit2.html">
-                    En savoir plus
-                </a>
-        	</div>
-        </div>
-    </div>
-	<div class="aaa">
-        <div class="article">
-        	<img src="images/vcam_3.jpg">
-            <h3 class="tit">
-            	Camera Stramer 90' - <span class="prixleft">230.90 €</span><br><span class="spandescription">C'est la camera la plus ancienne de tout le site. Ce modèle aurait appartenu au grand...</span>
-            </h3>
-             <div class="invisible">
-                <a class="savoir" href="produit3.html">
-                    En savoir plus
-                </a>
-        	</div>
-        </div>
-    </div>
-	<div class="aaa">
-        <div class="article">
-        	<img src="images/vcam_4.jpg">
-            <h3 class="tit">
-            	Camera Mamiya M - <span class="prixleft">99.99 €</span><br><span class="spandescription">Le premier reflex numerique couleur. Pour l'époque c'était une vrai bombe notamment...</span>
-            </h3>
-             <div class="invisible">
-                <a class="savoir" href="produit4.html">
-                    En savoir plus
-                </a>
-        	</div>
-        </div>
-    </div>
-    <div class="aaa">
-        <div class="article">
-        	<img src="images/vcam_5.jpg">
-            <h3 class="tit">
-            	Canon 310 M - <span class="prixleft">230.75 €</span><br><span class="spandescription">Il a fait monter la marque Canon en top dans les années 30, c'est le 310 M et son...</span>
-            </h3>
-             <div class="invisible">
-                <a class="savoir" href="produit5.html">
-                    En savoir plus
-                </a>
-        	</div>
-        </div>
-    </div>
-</div>
-
-<div class="information">
-	<div class="information1">
-		<aside>
-			<h2>
-				Orinoco... Qu'est-ce que c'est ?
-			</h2>
-			<p>
-				Orinoco est une application thématique ne vendant qu’un seul groupe de produits : des caméras vintages. Elle fait partie des nombreuses autres applications comme Oribook pour les livres ou Oritextil pour les vêtements qui se spécialise dans un produit.
-			</p>
-		</aside>
+	<div class="miniheader">
+		<ul>
+			<li>
+				<a href="index.html">
+					M A G A S I N S
+				</a>
+			</li>
+			<li>
+				<a href="https://fr.wikipedia.org/wiki/Orinoco" target="_BLANK">
+					H I S T O I R E 
+				</a>
+			</li>
+			<li>
+				<a href="mailto:orinoco@gmail.com">
+					C O N T A C T 
+				</a>
+			</li>
+			<li>
+				<a id="access" href="panier.html">
+					P A N I E R
+				</a>
+			</li>
+		</ul>
 	</div>
-	<div class="information2">
-		<aside>
-			<h2>
-				Comment ça marche ?
-			</h2>
-			<p>
-				C'est très simple ! Rechercher une caméra qui vous plait parmit les nombreuses proposés, ajouté la votre panier et passé commande.
-			</p>
-		</aside>
+
+	<div class="nosproduit">
+		<h1>
+			NOS PRODUITS
+		</h1>
 	</div>
-	<div class="information3">
-		<aside>
-			<h2>
-				Des questions ?
-			</h2>
-			<p>
-				Rendez-vous sur nos pages Facebook, Instagrame et Tweeter. (Lien bientôt disponible)
-			</p>
-		</aside>
+
+	<div class="container">
+		<article id="camera">
+				
+		</article>
 	</div>
-</div>
 
-<script>
-$(".add-to-cart").click(function(event){
-            event.preventDefault();
-            var name = $(this).attr("data-name");
-            var price = Number($(this).attr("data-price"));
-
-            shoppingCart.addItemToCart(name, price, 1);
-            displayCart();
-        });
-
-        $("#clear-cart").click(function(event){
-            shoppingCart.clearCart();
-            displayCart();
-        });
-
-        function displayCart() {
-            var cartArray = shoppingCart.listCart();
-            console.log(cartArray);
-            var output = "";
-
-            for (var i in cartArray) {
-                output += "<li>"
-                    +cartArray[i].name
-                    +" <input class='item-count' type='number' data-name='"
-                    +cartArray[i].name
-                    +"' value='"+cartArray[i].count+"' >"
-                    +" x "+cartArray[i].price
-                    +" = "+cartArray[i].total
-                    +" <button class='plus-item' data-name='"
-                    +cartArray[i].name+"'>+</button>"
-                    +" <button class='subtract-item' data-name='"
-                    +cartArray[i].name+"'>-</button>"
-                    +" <button class='delete-item' data-name='"
-                    +cartArray[i].name+"'>X</button>"
-                    +"</li>";
-            }
-
-            $("#show-cart").html(output);
-            $("#count-cart").html( shoppingCart.countCart() );
-            $("#total-cart").html( shoppingCart.totalCart() );
-        }
-
-        $("#show-cart").on("click", ".delete-item", function(event){
-            var name = $(this).attr("data-name");
-            shoppingCart.removeItemFromCartAll(name);
-            displayCart();
-        });
-
-        $("#show-cart").on("click", ".subtract-item", function(event){
-            var name = $(this).attr("data-name");
-            shoppingCart.removeItemFromCart(name);
-            displayCart();
-        });
-
-        $("#show-cart").on("click", ".plus-item", function(event){
-            var name = $(this).attr("data-name");
-            shoppingCart.addItemToCart(name, 0, 1);
-            displayCart();
-        });
-
-        $("#show-cart").on("change", ".item-count", function(event){
-            var name = $(this).attr("data-name");
-            var count = Number($(this).val());
-            shoppingCart.setCountForItem(name, count);
-            displayCart();
-        });
-
-
-        displayCart();
-</script>
-
-<footer>
-	<p>
-		Tout droits réservés-2019-2020 Orinoco
-	</p>
-	<p>
-		Réalisé par OrinocoSociaty
-	</p>
-</footer>
-
-
+	<div class="information">
+		<div class="information1">
+			<aside>
+				<h2>
+					Orinoco... Qu'est-ce que c'est ?
+				</h2>
+				<p>
+					Orinoco est une application thématique ne vendant qu’un seul groupe de produits : des caméras vintages. Elle fait partie des nombreuses autres applications comme Oribook pour les livres ou Oritextil pour les vêtements qui se spécialise dans un produit.
+				</p>
+			</aside>
+		</div>
+		<div class="information2">
+			<aside>
+				<h2>
+					Comment ça marche ?
+				</h2>
+				<p>
+					C'est très simple ! Rechercher une caméra qui vous plait parmit les nombreuses proposés, ajouté la votre panier et passé commande.
+				</p>
+			</aside>
+		</div>
+		<div class="information3">
+			<aside>
+				<h2>
+					Des questions ?
+				</h2>
+				<p>
+					Rendez-vous sur nos pages Facebook, Instagrame et Tweeter. (Lien bientôt disponible)
+				</p>
+			</aside>
+		</div>
+	</div>
+	
+	<footer>
+		<p>
+			Tout droits réservés-2019-2020 Orinoco
+		</p>
+		<p>
+			Réalisé par OrinocoSociaty
+		</p>
+	</footer>
 
 </body>
 </html>
-

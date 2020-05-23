@@ -1,312 +1,169 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Orinoco</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<meta name="description" content="Trouver la caméra qu'il vous faut sur Oriview">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-	<link href="img/favicon.ico" rel="shortcut icon" />
-	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="index.js"></script>
-	<script src="JWDP5-master/app.js"></script>
-    <script src="JWDP5-master/serveur.js"></script>
-    <script src="JWDP5-master/package.json.js"></script>
-    <script src="JWDP5-master/models/camera.js"></script>
-    <script src="JWDP5-master/controllers/camera.js"></script>
-    <script src="JWDP5-master/routes/camera.js"></script>
-    
+    <title>Orinoco - Panier</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Trouver la caméra qu'il vous faut sur Orinoco">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="img/favicon.ico" rel="shortcut icon" />
+
+    <script type="text/javascript" src="panier.js"></script>
 </head>
 
-<body class="panier">
+<body class="panier" onload="panier()">
 
-<header>
-	<a href="index.html">
-		<img class="titre" src="img/oriview.png">
-	</a>
-</header>
-<div class="miniheader">
-	<ul>
-		<li>
-			<a href="index.html">
-				M A G A S I N S
-			</a>
-		</li>
-		<li>
-			<a href="https://fr.wikipedia.org/wiki/Orinoco" target="_BLANK">
-				H I S T O I R E 
-			</a>
-		</li>
-		<li>
-			<a href="mailto:orinoco@gmail.com">
-				C O N T A C T 
-			</a>
-		</li>
-		<li>
-			<a href="panier.html">
-				P A N I E R
-			</a>
-		</li>
-	</ul>
-</div>
+   <header>
+        <a href="index.html">
+            <img class="titre" src="img/oriview.png">
+        </a>
+    </header>
 
-<div class="blockpanier">
-	<div class="panierfinal">
-		<div class="paniertop">
-			<h1>
-				Mon Panier
-			</h1>
-			<div class="tt">
-	        	Total : € <span id="total-cart"></span>
-	        </div>
-        </div>
-        <!-- Liste des Articles dans le panier -->
-        <ul id="show-cart">
+    <div class="miniheader">
+        <ul>
             <li>
-            	
+                <a href="index.html">
+                    M A G A S I N S
+                </a>
+            </li>
+            <li>
+                <a href="https://fr.wikipedia.org/wiki/Orinoco" target="_BLANK">
+                    H I S T O I R E 
+                </a>
+            </li>
+            <li>
+                <a href="mailto:orinoco@gmail.com">
+                    C O N T A C T 
+                </a>
+            </li>
+            <li>
+                <a href="panier.html">
+                    P A N I E R
+                </a>
             </li>
         </ul>
-        <div class="nombre">
-        	Vous avez <span id="count-cart">X</span> Article(s) dans votre panier
+    </div>
+
+    <div id="panierpanier">
+        <div id="panierfinal">
+            <div id="confirme">
+                
+            </div>
+            <section id="achatfinal">
+                <article id="panier">
+                    <h2 id="modif">
+                        Panier
+                    </h2>
+                    <p id="paniervide">
+                        Panier Vide : Veuillez ajouter un article pour commander
+                    </p>
+                </article>
+                <article id="prixtotal">
+                    <h2>
+                        Total :
+                    </h2>
+                </article>
+            </section>
+        </div>
+
+        <div id="formulairefinal">
+            <section id="viderpanier">
+                <button id="detele" onclick="clean()">
+                    Vider le panier
+                </button>
+                <article id="formulaire">
+                    <legend> 
+                        Enregistrez votre Commande 
+                    </legend>
+                    <form>
+                        <div class="inputtop">
+                            <div class="inputleft">
+                                <label for="prenom"> Prénom : </label>
+                                <input type="text" name="prenom" id="prenom" onchange="sessionStorage.prenom=this.value"/>
+                                <label for="nom"> Nom : </label>
+                                <input type="text" name="nom" id="nom" onchange="sessionStorage.nom=this.value" />
+                                <label for="rue"> Adresse : </label>
+                                <input type="text" name="rue" id="rue" onchange="sessionStorage.rue=this.value"/>
+                            </div>
+                            <div class="inputright">
+                                <label for="ville">Ville :</label>
+                                <input type="text" name="ville" id="ville" onchange="sessionStorage.ville=this.value"/>
+                                <label for="email"> Email : </label>
+                                <input type="email" name="email" id="email" onchange="sessionStorage.email=this.value"/>
+                                <label for="telephone">Téléphone : </label>
+                                <input type="tel" name="telephone" id="telephone" required="" onchange="sessionStorage.telephone=this.value">
+                            </div>
+                        </div>
+                    </form>
+                    <button id="send" onclick="sendData()" />
+                        Commander
+                    </button>
+                </article>
+            </section>
+            <div id="commande">
+                <h2>
+                    
+                </h2>
+            </div>
         </div>
     </div>
-	<div class="formulaire">
-		<form method="post" action="confirmation.html">
-			<legend>
-				Enregistrez votre Commande
-			</legend>
-			<div class="inputtop">
-				<div class="inputleft">
-					<label for="prenom">Prénom</label>
-					<input type="text" name="prenom" id="prenom" required="" onchange="sessionStorage.prenom=this.value">
-					<label for="nom">Nom</label>
-					<input type="text" name="nom" id="nom" required="" onchange="sessionStorage.nom=this.value">
-					<label for="email">Email</label>
-					<input type="email" name="email" id="email" required="" onchange="sessionStorage.email=this.value">
-				</div>
-				<div class="inputright">
-					<label for="telephone">Téléphone</label>
-					<input type="tel" name="telephone" id="telephone" required="" onchange="sessionStorage.telephone=this.value">
-					<label for="rue">N et Rue</label>
-					<input type="text" name="rue" id="rue" required="" onchange="sessionStorage.rue=this.value">
-					<label for="ville">Ville</label>
-					<input type="text" name="ville" id="ville" required="" onchange="sessionStorage.ville=this.value">
-				</div>
-			</div>
-			<div class="inputbottom">
-				<div class="pays">
-					<label for="pays">Pays</label>
-					<select name="pays" id="pays" required="">
-						<option value="france">France</option>
-						<option value="usa">Etats-Unis</option>
-						<option value="angletterre">Angletterre</option>
-						<option value="suisse">Suisse</option>
-						<option value="espagne">Espagne</option>
-					</select>
-				</div>
 
-				<div class="condition">
-					<label for="condition">J'accepte avoir lu les Conditions Générales d'utilisation.</label>
-					<input type="checkbox" name="condition" id="condition" required="">
-				</div>
+    <footer>
+        <p>
+            Tout droits réservés-2019-2020 Orinoco
+        </p>
+        <p>
+            Réalisé par OrinocoSociaty
+        </p>
+    </footer>
 
-				<div>
-				<input class="commander" type="submit" name="commander" value="Commander">
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
-
-
-<script>
-	// Affichage de la demande de confirmation d'inscription
-		document.getElementById("condition").addEventListener("change", function (e) {
-    	console.log("Condition Lu : " + e.target.checked);
-		});
-
-	// Affichage du code de nationalité choisi
-		document.getElementById("pays").addEventListener("change", function (e) {
-    	console.log("Pays d'envoi : " + e.target.value);
-		});
-
-		var form = document.querySelector("form");
-		console.log("Nombre de champs de saisie : " + form.elements.length); // Affiche 10
-		console.log(form.elements[0].name); // Affiche "pseudo"
-		console.log(form.elements[0].name); // Affiche "pseudo"
-		console.log(form.elements[0].name); // Affiche "pseudo"
-		console.log(form.elements[0].name); // Affiche "pseudo"
-		console.log(form.elements[0].name); // Affiche "pseudo"
-		console.log(form.elements[0].name); // Affiche "pseudo"
-
-
-	// Affiche de toutes les données saisies ou choisies
-	form.addEventListener("submit", function (e) {
-	    var prenom = form.elements.prenom.value;
-	    var nom = form.elements.nom.value;
-	    var email = form.elements.email.value;
-	    var telephone = form.elements.telephone.value;
-	    var rue = form.elements.rue.value;
-	    var ville = form.elements.ville.value;
-	    console.log("PRENOM : " + prenom + " NOM : " +
-	        nom + " EMAIL : " + email + " TELEPHONE : " + telephone + " ADRESSE : " + rue + " A " + ville);
-	    if (form.elements.condition.checked) {
-	        console.log("Condition Lu et Approuvé");
-	    }
-	    switch (form.elements.pays.value) {
-	    case "france":
-	        console.log("Votre Colis sera livré en France");
-	        break;
-	    case "usa":
-	        console.log("Votre Colis sera livré au Etats-Unis");
-	        break;
-	    case "angletterre":
-	        console.log("Votre Colis sera livré en Angletterre");
-	        break;
-	    case "suisse":
-	        console.log("Votre Colis sera livré en Suisse");
-	        break;
-	    case "espagne":
-	        console.log("Votre Colis sera livré en Espagne");
-	        break;
-	    default:
-	        console.log("Erreur : code de nationalité non reconnu");
-	    }
-
-	});
-		
-	// Sauvegarde Formulaire
-	if(typeof sessionStorage!='undefined') {
-		if('prenom' in sessionStorage) {
-		document.getElementById('prenom').value = sessionStorage.getItem('prenom');
-		}
-	} else {
-		alert("sessionStorage n'est pas supporté");
-	}
-	if(typeof sessionStorage!='undefined') {
-		if('nom' in sessionStorage) {
-		document.getElementById('nom').value = sessionStorage.getItem('nom');
-		}
-	} else {
-		alert("sessionStorage n'est pas supporté");
-	}
-	if(typeof sessionStorage!='undefined') {
-		if('email' in sessionStorage) {
-		document.getElementById('email').value = sessionStorage.getItem('email');
-		}
-	} else {
-		alert("sessionStorage n'est pas supporté");
-	}
-	if(typeof sessionStorage!='undefined') {
-		if('telephone' in sessionStorage) {
-		document.getElementById('telephone').value = sessionStorage.getItem('telephone');
-		}
-	} else {
-		alert("sessionStorage n'est pas supporté");
-	}
-	if(typeof sessionStorage!='undefined') {
-		if('rue' in sessionStorage) {
-		document.getElementById('rue').value = sessionStorage.getItem('rue');
-		}
-	} else {
-		alert("sessionStorage n'est pas supporté");
-	}
-	if(typeof sessionStorage!='undefined') {
-		if('ville' in sessionStorage) {
-		document.getElementById('ville').value = sessionStorage.getItem('ville');
-		}
-	} else {
-		alert("sessionStorage n'est pas supporté");
-	}
-
-
-
-
-
-
-
-
-
-	$(".add-to-cart").click(function(event){
-                event.preventDefault();
-                var name = $(this).attr("data-name");
-                var price = Number($(this).attr("data-price"));
-
-                shoppingCart.addItemToCart(name, price, 1);
-                displayCart();
-            });
-
-            $("#clear-cart").click(function(event){
-                shoppingCart.clearCart();
-                displayCart();
-            });
-
-            function displayCart() {
-                var cartArray = shoppingCart.listCart();
-                console.log(cartArray);
-                var output = "";
-
-                for (var i in cartArray) {
-                    output += "<li>"
-                        +cartArray[i].name
-                        +" <input class='item-count' type='number' data-name='"
-                        +cartArray[i].name
-                        +"' value='"+cartArray[i].count+"' >"
-                        +" x "+cartArray[i].price
-                        +" = "+cartArray[i].total
-                        +" <button class='plus-item' data-name='"
-                        +cartArray[i].name+"'>+</button>"
-                        +" <button class='subtract-item' data-name='"
-                        +cartArray[i].name+"'>-</button>"
-                        +" <button class='delete-item' data-name='"
-                        +cartArray[i].name+"'>X</button>"
-                        +"</li>";
-                }
-
-                $("#show-cart").html(output);
-                $("#count-cart").html( shoppingCart.countCart() );
-                $("#total-cart").html( shoppingCart.totalCart() );
+    <script>
+        // Sauvegarde Formulaire dans le SessionStorage
+        if(typeof sessionStorage!='undefined') {
+            if('prenom' in sessionStorage) {
+            document.getElementById('prenom').value = sessionStorage.getItem('prenom');
             }
-
-            $("#show-cart").on("click", ".delete-item", function(event){
-                var name = $(this).attr("data-name");
-                shoppingCart.removeItemFromCartAll(name);
-                displayCart();
-            });
-
-            $("#show-cart").on("click", ".subtract-item", function(event){
-                var name = $(this).attr("data-name");
-                shoppingCart.removeItemFromCart(name);
-                displayCart();
-            });
-
-            $("#show-cart").on("click", ".plus-item", function(event){
-                var name = $(this).attr("data-name");
-                shoppingCart.addItemToCart(name, 0, 1);
-                displayCart();
-            });
-
-            $("#show-cart").on("change", ".item-count", function(event){
-                var name = $(this).attr("data-name");
-                var count = Number($(this).val());
-                shoppingCart.setCountForItem(name, count);
-                displayCart();
-            });
-
-
-            displayCart();
-    
-</script>
-
-<footer>
-	<p>
-		Tout droits réservés-2019-2020 Orinoco
-	</p>
-	<p>
-		Réalisé par OrinocoSociaty
-	</p>
-</footer>
-
+        } else {
+            alert("sessionStorage n'est pas supporté");
+        }
+        if(typeof sessionStorage!='undefined') {
+            if('nom' in sessionStorage) {
+            document.getElementById('nom').value = sessionStorage.getItem('nom');
+            }
+        } else {
+            alert("sessionStorage n'est pas supporté");
+        }
+        if(typeof sessionStorage!='undefined') {
+            if('email' in sessionStorage) {
+            document.getElementById('email').value = sessionStorage.getItem('email');
+            }
+        } else {
+            alert("sessionStorage n'est pas supporté");
+        }
+        if(typeof sessionStorage!='undefined') {
+            if('telephone' in sessionStorage) {
+            document.getElementById('telephone').value = sessionStorage.getItem('telephone');
+            }
+        } else {
+            alert("sessionStorage n'est pas supporté");
+        }
+        if(typeof sessionStorage!='undefined') {
+            if('rue' in sessionStorage) {
+            document.getElementById('rue').value = sessionStorage.getItem('rue');
+            }
+        } else {
+            alert("sessionStorage n'est pas supporté");
+        }
+        if(typeof sessionStorage!='undefined') {
+            if('ville' in sessionStorage) {
+            document.getElementById('ville').value = sessionStorage.getItem('ville');
+            }
+        } else {
+            alert("sessionStorage n'est pas supporté");
+        }
+    </script>
 
 </body>
 </html>

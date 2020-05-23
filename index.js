@@ -1,132 +1,52 @@
-// Propriété du Panier
-    var shoppingCart = (function () {
-    // Méthode
-        var cart = [];
-    // Création de la fonction article serveur
-        function Item(name, price, count, lenses, description, imageUrl) {
-            this.name = name
-            this.price = price
-            this.count = count
-            this.lenses = lenses
-            this.description = description
-            this.imageUrl = imageUrl
-        }
-    // Sauvegarde Panier avec localStorage
-        function saveCart() {
-            localStorage.setItem("shoppingCart", JSON.stringify(cart));
-        }
-        function loadCart() {
-            cart = JSON.parse(localStorage.getItem("shoppingCart"));
-            if (cart === null) {
-                cart = []
-            }
-        }
+//Récuperation des données en JSON venant de l'api du Backend 
+async function recup() {
+	response = await fetch("http://localhost:3002/api/cameras");
+	data = await response.json();
+	return data;
+}
 
-        loadCart();
+//Récupère JSON de chaque caméra en 4 éléments en executant une promise
+recup().then(() => { //Exécution du code dès que la promesse est résolue
+	for (let article of data) {
+		//Création de la DIV PARENT pour les camera
+		let oldname = 0;
+		if (article.name !== oldname) {
+				const parent = document.getElementById('camera');
+				const new_parent = document.createElement("a");
+				parent.append(new_parent);
+				new_parent.id = article._id;
+				new_parent.addEventListener('click', function (e) {
+					sessionStorage.setItem('article_id', event.currentTarget.getAttribute('id'));
+			})
 
+			new_parent.className = "product";
+			new_parent.href = "produit.html";
+			const child_photo = document.getElementById(article._id);
+			const photo_child = document.createElement("img");
+			photo_child.src = article.imageUrl;
+			photo_child.alt = article.name;
+			photo_child.title = article.name;
+			child_photo.append(photo_child);
+			photo_child.id = "image";
 
+			//Affiche le nom du produit
+			const child_name = document.getElementById(article._id);
+			const name_child = document.createElement("p");
+			child_name.append(name_child);
+			name_child.id = "name";
+			console.log(name_child.innerHTML += article.name);
 
-// Partie destinée au publique
-// Chargement de l'objet demandé
-    var obj = {};
-// Ajoute ses 3 fonctions de l'article au panier
-    obj.addItemToCart = function (name, price, count, lenses) {
-        for (var i in cart) {
-            if (cart[i].name === name) {
-                cart[i].count += count;
-                saveCart();
-                return;
-            }
-        }
+			//Affiche le prix
+			const child_price = document.getElementById(article._id);
+			const price_child = document.createElement("p");
+			child_price.append(price_child);
+			price_child.id = "price";
+			price = article.price / 100;
+			price += " €";
+			console.log(price_child.innerHTML += price);
+		}
+	}
 
-        console.log("addItemToCart:", name, price, count, lenses);
-
-        var item = new Item(name, price, count, lenses);
-        cart.push(item);
-        saveCart();
-    };
-// Nombre d'article à ajouter
-    obj.setCountForItem = function (name, count) {
-        for (var i in cart) {
-            if (cart[i].name === name) {
-                cart[i].count = count;
-                break;
-            }
-        }
-        saveCart();
-    };
-
-// Retirer l'objet du panier
-    obj.removeItemFromCart = function (name) {  
-        for (var i in cart) {
-            if (cart[i].name === name) { 
-                cart[i].count--; 
-                if (cart[i].count === 0) {
-                    cart.splice(i, 1);
-                }
-                break;
-            }
-        }
-        saveCart();
-    };
-
-// Supprime tout les noms d'articles
-    obj.removeItemFromCartAll = function (name) { 
-        for (var i in cart) {
-            if (cart[i].name === name) {
-                cart.splice(i, 1);
-                break;
-            }
-        }
-        saveCart();
-    };
-
-
-    obj.clearCart = function () {
-        cart = [];
-        saveCart();
-    }
-
-// Total d'article
-    obj.countCart = function () { 
-        var totalCount = 0;
-        for (var i in cart) {
-            totalCount += cart[i].count;
-        }
-
-        return totalCount;
-    };
-
-// Total Prix
-    obj.totalCart = function () { 
-        var totalCost = 0;
-        for (var i in cart) {
-            totalCost += cart[i].price * cart[i].count;
-        }
-        return totalCost.toFixed(2);
-    };
-
-// Tableau du panier
-    obj.listCart = function () {
-        var cartCopy = [];
-        console.log("Listing cart");
-        console.log(cart);
-        for (var i in cart) {
-            console.log(i);
-            var item = cart[i];
-            var itemCopy = {};
-            for (var p in item) {
-                itemCopy[p] = item[p];
-            }
-            itemCopy.total = (item.price * item.count).toFixed(2);
-            cartCopy.push(itemCopy);
-        }
-        return cartCopy;
-    };
-
-
-    return obj;
-})();
-
+})
 
 

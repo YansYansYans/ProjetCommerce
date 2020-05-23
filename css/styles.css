@@ -12,9 +12,7 @@
 a {
   text-decoration: none;
 }
-#message1 {
-  color: red;
-}
+
 header {
   background-color: #B0BEC5;
   box-shadow: 0px 2px 5px grey;
@@ -23,6 +21,7 @@ header .titre {
   width: 10%;
   margin-left: 1.5%;
 }
+
 .miniheader {
   background-color: #B0BEC5;
   width: 60%;
@@ -46,83 +45,57 @@ header .titre {
   color: #D84315;
   transition: 1000ms;
 }
+
 .nosproduit {
   text-align: center;
   margin-top: 150px;
   font-size: 1.2em;
 }
-.container {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+
+#camera {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  width: 80%;
   margin-top: 150px;
   margin-bottom: 200px;
-  justify-content: center;
-}
-.container .article {
-  width: 240px;
-  height: 280px;
-  margin: 10px;
-  border-radius: 2.5px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-.container .article:hover {
+#camera a {
+  margin: 10px;
+}
+#camera a:hover {
   transition: 400ms;
   box-shadow: 0px 0px 5px grey;
 }
-.container .aaa img {
+#camera img {
   width: 15em;
 }
-.container .aaa h3 {
-  font-size: 1.1em;
-  color: #261624;
+#camera p {
+  color: black;
+  font-size: 1.2em;
 }
-.container .prixleft {
-  color: red;
-}
-.container .spandescription {
-  font-size: 0.7em;
-}
-.invisible {
-  display: none;
-  margin-top: 40px;
-  font-weight: bold;
-  color: #261624;
-}
-.container .article:hover:hover .invisible {
-  display: flex;
-  justify-content: space-around;
-}
-.container .article:hover:hover h3 {
-  display: none;
-}
-.container .savoir, .container .add-to-cart {
-  background-color: #D84315;
-  color: white;
-  padding: 10px;
-}
-.container .savoir:hover, .container .add-to-cart:hover {
-  transition: 500ms;
-  opacity: 60%;
-}
+
 .information {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.7em;
 }
-.information1, .information2, .information3 {
+.information .information1, .information .information2, .information .information3 {
   margin-bottom: 15%;
 }
 
 .information2 aside {
   margin-left: 50%;
 }
+
 aside {
   width: 50%;
 }
+
 footer {
   background-color: #B0BEC5;
   display: flex;
@@ -132,103 +105,72 @@ footer {
   padding-right: 5%;
 }
 
-#blockproduit {
-  width: 70%;
+#camera {
+  width: 80%;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 200px;
   margin-top: 200px;
   flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row-reverse;
 }
-#blockproduit .topleft {
-  width: 50%;
-}
+
 #blockproduit img {
-  width: 100%;
+  width: 500px;
+  height: 350px;
   display: flex;
+  margin-top: 75px;
+}
+
+#infos {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
-.blocktop, .blockbottom {
-  display: flex;
-  margin-bottom: 100px;
-  justify-content: space-between;
-  flex-wrap: wrap;
+#infos h3 {
+  font-size: 2em;
+  margin-top: 50px;
 }
-.topright {
-  text-align: left;
-  color: #261624;
-  font-weight: bold;
-  width: 40%;
+#infos p {
+  width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
-.topright .prix1 {
-  display: flex;
-  font-size: 1.5em;
-}
-.topright span {
-  font-style: italic;
-  font-size: 0.8em;
-}
-.blockbottom {
-  margin-top: -70px;
-}
-.bottomleft {
-  width: 70%;
-  flex-wrap: wrap;
-}
-.bottomleft button {
-  padding: 10px;
-  color: white;
-  width: 100px;
-  border-radius: 5px;
-}
-.bottomleft .attention {
-    font-size: 0.6em;
-    color: red;
-}
-.bottomleft button:hover {
-  opacity: 70%;
-}
-#btnr {
-  background-color: #f44336;
-}
-#btnb {
-  background-color: #2196F3;
-}
-#btnv {
-  background-color: #4CAF50;
-}
-.addprod {
+#infos button {
   background-color: #D84315;
+  color: white;
   padding: 10px;
   font-size: 1.2em;
-  color: white;
-  margin-top: 70px;
-}
-.addprod:hover {
-  opacity: 60%;
-  transition: 500ms;
-}
-.bottomright p {
-  display: none;
-  text-align: center;
-  color: red;
-}
-.bottomright:active:active p {
-  display: block;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
 }
 
-.panier .miniheader a {
-  font-size: 0.8em;
+#infos h4 {
+  color: #D84315;
+  font-size: 2em;
+  margin-top: -80px;
+  margin-bottom: 10px;
 }
-#blockpanier {
+
+#infos #infos:hover {
+  opacity: 80%;
+  transition: 500ms;
+}
+
+#panierpanier {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
 }
-.panierfinal {
+
+#panierfinal {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
@@ -236,38 +178,15 @@ footer {
   flex-wrap: wrap;
   margin-top: 200px;
   border: 2px #B0BEC5 solid;
-}
-.paniertop {
-  display: flex;
-  justify-content: space-between;
-}
-.paniertop h1 {
-  text-align: left;
-  font-size: 3em;
-  margin-left: 30px;
-  margin-top: 0px;
-}
-.paniertop .tt {
-  font-size: 1.5em;
-  color: #D84315;
-  font-weight: bold;
-  margin-right: 30px;
-  margin-top: 25px;
-}
-.panier li {
-  list-style-type: none;
-  font-size: 1.5em;
-}
-.panier li button {
-    border-radius: 50px;
-    background-color: #78909C;
-    color: white;
-  }
-.nombre {
   text-align: center;
-  margin-bottom: 10px;
+  font-size: 1.3em;
 }
-.formulaire {
+
+#panierfinal h3 {
+  color: #D84315;
+}
+
+#formulairefinal {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
@@ -275,95 +194,50 @@ footer {
   margin-bottom: 200px;
   flex-wrap: wrap;
 }
-.formulaire legend {
+
+legend {
   text-align: center;
   font-size: 2em;
   font-weight: bold;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
+
+button {
+  padding: 10px;
+  background-color: #B0BEC5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+}
+
 .inputtop {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .inputleft, .inputright {
   display: flex;
   flex-direction: column;
 }
-.formulaire input {
+
+input {
   width: 200px;
 }
-.inputbottom {
-  width: 71%;
-  margin-right: auto;
-  margin-left: auto;
-}
-.formulaire .pays {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.pays select {
-  margin-left: 50px;
-}
-.formulaire .condition {
-  display: flex;
-  justify-content: flex-start;
-  font-weight: bold;
-  margin-bottom: 50px;
-}
-.formulaire .commander {
+
+#send {
   margin-bottom: 50px;
   background-color: #D84315;
   color: white;
 }
-.formulaire .commander:hover {
+
+#send:hover {
   opacity: 80%;
   transition: 500ms;
-}
-#blockconfirmation {
-  margin-bottom: 200px;
-}
-.titreconfirmation {
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  display: flex;
-  margin-left: 5%;
-  margin-top: 50px;
-}
-.titreconfirmation h1 {
-  font-size: 5em;
-  color: #261624;
-  margin-left: 2.5%;
-}
-.titreconfirmation .fa-paper-plane {
-  margin-top: 40px;
-  color: #261624;
-}
-.titreconfirmation p {
-  font-size: 2em;
-  font-weight: bold;
-  margin-top: 90px;
-  color: #261624;
-}
-.allconfirmation {
-  margin-left: 5%;
-  font-size: 1.7em;
-}
-.allconfirmation div {
-  margin-bottom: 5%;
-}
-.allconfirmation div span {
-  font-weight: bold;
-}
-.allconfirmation div span.retour {
-  font-weight: normal;
-  color: red;
-  background-color: white;
-}
-.totalprix #total {
-  width: 300px;
 }
 
 @media all and (max-device-width: 576px) {
@@ -371,251 +245,150 @@ footer {
     width: 50%;
     margin-left: 25%;
   }
+
   .miniheader {
-  width: 100%;
-}
+    width: 100%;
+  }
+
   .miniheader ul {
     flex-wrap: wrap;
   }
+
   .miniheader li {
     margin: 40px;
   }
+
   .miniheader a {
     font-size: 3em;
   }
+
   .nosproduit {
-  font-size: 2em;
+    font-size: 2em;
   }
-  .container .aaa h3 {
-    font-size: 3.5em;
+
+  #camera {
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .invisible {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-    font-weight: bold;
-    color: #261624;
-    font-size: 3.8em;
+
+  #camera a {
+    width: 80%;
+    margin: 10px;
+    border: 2px black solid;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .container .article:hover:hover .invisible {
-    display: flex;
-    justify-content: space-around;
+
+  #camera p {
+    font-size: 4em;
   }
-  .container .article:hover:hover h3 {
-    display: block;
-  }
-  .container .savoir, .container .add-to-cart {
-    background-color: #D84315;
-    color: white;
-    padding: 10px;
-  }
-  #blockmain {
+
+  #camera img {
     width: 100%;
-    height: 1000px;
-    margin-bottom: 10%;
   }
+
   .information {
     width: 70%;
     font-size: 3em;
     text-align: justify;
   }
+
   .information1, .information2, .information3 {
     margin-bottom: 15%;
   }
+
   .information2 aside {
     margin-left: 0%;
   }
+
   aside {
     width: 100%;
   }
+
   footer {
     font-size: 3em;
   }
-  .container {
+
+  #camera {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  #blockproduit img {
+    width: 50em;
+    height: 550px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #infos {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #infos h3 {
+    font-size: 4em;
+  }
+
+  #infos h4 {
+    font-size: 4em;
+  }
+
+  #infos select {
+    font-size: 3em;
+  }
+
+  #infos button {
+    font-size: 4em;
+    width: 450px;
+    margin-top: 200px;
+  }
+
+  #panierpanier {
+    width: 100%;
+  }
+
+  #panierfinal {
+    width: 90%;
+    font-size: 3em;
+  }
+
+  #formulairefinal {
     width: 90%;
   }
-  .container .article {
-    width: 740px;
-    height: 1000px;
-    box-shadow: 0px 0px 10px black;
-    margin-bottom: 100px;
-  }
-  .container .article:active:active h2 {
-    display: block;
-  }
-  .container .article img {
-    width: 46em;
-  }
-  .container .invisble {
-    display: flex;
-    margin-top: -100px;
-    font-size: 3em;
-    width: 150px;
-    margin-right: auto;
-    margin-left: auto;
+
+  legend {
+    font-size: 4em;
   }
 
-  #blockproduit {
-    width: 80%;
+  button {
+    padding: 10px;
+    font-size: 3em;
   }
-  #blockproduit img {
-    width: 48.2em;
-  }
-  #blockproduit .prix1 {
-    font-size: 4em;
-    color: #D84315;
-  }
-  #blockproduit .infos {
-    font-size: 2em;
-    color: #D84315;
-  }
-  #blockproduit p {
-    text-align: justify;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 2.5em;
-  }
-  .topright {
-    width: 100%;
-    margin-right: 0%;
-  }
-  .topright h1 {
-    font-size: 5em;
-  }
-  .topright p {
-    font-size: 3.5em;
-  }
-  .blockbottom {
+
+  .inputtop {
     flex-direction: column;
   }
-  .bottomleft h2 {
-    font-size: 5em;
-  }
-  .bottomleft .attention {
-    font-size: 0.6em;
-  }
-  .bottomleft button {
-  padding: 10px;
-  width: 300px;
-  border-radius: 20px;
-  font-size: 5em;
-  }
-  .addprod {
-    font-size: 4em;
-    text-align: center;
+
+  .inputtop label {
+    font-size: 3em;
   }
 
-  .panier li a {
-  font-size: 0.7em;
-  }
-  .panierfinal {
-    width: 100%;
-    border: none;
-  }
-  .paniertop h1 {
-    font-size: 6em;
-  }
-  .paniertop .tt {
-    font-size: 4em;
-  }
-  .panier li {
-    list-style-type: none;
-    font-size: 4em;
-  }
-  .panier li button {
-    border-radius: 50px;
-    font-size: 1em;
-    width: 80px;
-    background-color: #78909C;
-    color: white;
-  }
-  .btn-danger {
-    font-size: 3em;
-    margin-left: auto;
+  .inputleft, .inputright {
     margin-right: auto;
-    padding: 10px;
-    margin-top: 50px;
-    margin-left: 25%;
-  }
-  .formulaire {
-    width: 80%;
-  }
-  .formulaire legend {
-    font-size: 4em;
-    margin-bottom: 100px;
-  }
-  .formulaire input {
-    width: 600px;
-    height: 50px;
-    border-radius: 15px;
-    margin-bottom: 50px;
-    border-color: black;
-    font-size: 1em;
-  }
-  input {
-    font-size: 0.6em;
-  }
-  #prenom, #nom, #telephone, #email, #rue, #ville {
-    font-size: 2em;
-  }
-  .formulaire label {
-    font-size: 2.5em;
-  }
-  .formulaire .pays {
-    margin-left: 40px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  .formulaire .pays select {
-    margin-left: 80px;
-    font-size: 2em;
-    border-color: black;
-  }
-  .formulaire .condition {
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 40px;
-    font-weight: bold;
-    margin-bottom: 50px;
-  }
-  .formulaire .commander {
-    margin-bottom: 50px;
-    font-size: 3em;
-    height: 100px;
-    width: 300px;
-    background-color: #D84315;
-    color: white;
-    font-weight: bold;
-  }
-  .formulaire .commander:active {
-    background-color: white;
-    color: #261624;
-  }
-  .confirmation footer {
-    display: none;
-  }
-  .titreconfirmation {
-    margin-left: 2.5%;
-    margin-top: 100px;
-  }
-  .allconfirmation {
-    margin-left: 10%;
-    margin-right: 10%;
-    font-size: 2em;
-    text-align: justify;
-  }
-  .allconfirmation div {
-    margin-bottom: 0%;
-    margin-top: 80px;
-  }
-  .allconfirmation div span {
-    font-weight: bold;
-  }
-  .allconfirmation .rouge {
-    font-weight: normal;
-    color: red;
+    margin-left: auto;
   }
 
-  
+  input {
+    width: 600px;
+    font-size: 3em;
+    border-radius: 5px;
+    border: 2px black solid;
+  }
 }
+
+/*# sourceMappingURL=styles.css.map */
