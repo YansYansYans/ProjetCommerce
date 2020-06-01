@@ -87,7 +87,7 @@ function add() {
 		panierfinal = "a"
 	}
 
-	//Variable "rechercheProduit" recherche, au clic "ajouter au panier" si le produit est deja dans le panier
+	//Variable "rechercheProduit" recherche, au clic "ajouter au panier", si le produit est deja dans le panier
 	//Si oui, affiche alert
 	let rechercheProduit = panierfinal.indexOf(camera) != -1;
 	if (rechercheProduit == 1) {
