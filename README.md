@@ -1,15 +1,16 @@
-# Orinoco #
+# Projet 5 : Contruire un site e-commerce #
 
-This is the back end server for Project 5 of the Junior Web Developer path.
+Dans ce référenciel vous trouverez le frontend (créé par Yannis AITKHELIFA) ainsi que le backend (fournis par OpenClassroom) pour le projet numéro 5 qui consiste à coder un site e-commerce.
 
-### Prerequisites ###
 
-You will need to have Node and `npm` installed locally on your machine.
+### Utilisation ###
 
-### Installation ###
+Installer Node.js sur votre machine
+Dans le cmd (terminal) taper "npm install" puis "ng serve" ou "npm start"
 
-Clone this repo. From within the project folder, run `npm install`. You 
-can then run the server with `node server`. 
-The server should run on `localhost` with default port `3000`. If the
-server runs on another port for any reason, this is printed to the
-console when the server starts, e.g. `Listening on port 3001`.
+
+### Infos complémentaires ###
+
+Le serveur se trouve sur le port 3002.
+
+Validation W3C
