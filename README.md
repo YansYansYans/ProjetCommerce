@@ -6,11 +6,10 @@ Dans ce référenciel vous trouverez le frontend (créé par Yannis AITKHELIFA) 
 ### Utilisation ###
 
 Installer Node.js sur votre machine
+
 Dans le cmd (terminal) taper "npm install" puis "ng serve" ou "npm start"
 
 
 ### Infos complémentaires ###
 
-Le serveur se trouve sur le port 3002.
-
-Validation W3C
+Le serveur se trouve sur le port 3002 /// Validation W3C
